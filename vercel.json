@@ -36,10 +36,5 @@
       ]
     }
   ],
-  "functions": {
-    "app/api/contact.ts": {
-      "maxDuration": 10
-    }
-  }
 }
 
