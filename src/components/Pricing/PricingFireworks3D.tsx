@@ -238,7 +238,7 @@ const FireworkParticleSystem: React.FC = () => {
     setSizes(new Float32Array(allSizes));
   };
 
-  useFrame((_, delta) => {
+  useFrame(() => {
     const now = Date.now();
     
     // Launch new firework every 2-3 seconds (less frequent than hero)

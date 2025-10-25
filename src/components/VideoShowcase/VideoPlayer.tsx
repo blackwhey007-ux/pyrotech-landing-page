@@ -21,7 +21,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, index }) => {
   const isYouTubeVideo = !video.videoUrl.includes('/') && !video.videoUrl.includes('.');
   const youtubeEmbedUrl = isYouTubeVideo 
     ? `https://www.youtube.com/embed/${video.videoUrl}?autoplay=1&rel=0&modestbranding=1`
-    : null;
+    : undefined;
 
   return (
     <motion.div

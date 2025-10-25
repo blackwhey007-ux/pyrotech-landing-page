@@ -2,7 +2,7 @@
 // This helps reduce noise from common development warnings
 
 export const suppressConsoleWarnings = () => {
-  if (process.env.NODE_ENV === 'development') {
+  if (typeof process !== 'undefined' && process.env.NODE_ENV === 'development') {
     // Suppress common Three.js warnings
     const originalWarn = console.warn;
     console.warn = (...args) => {
