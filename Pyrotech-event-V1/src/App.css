@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS for mobile fireworks fallback */
+.firework-css-animation {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.firework {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  animation: firework-explosion 2s ease-out infinite;
+}
+
+.firework-1 {
+  top: 20%;
+  left: 20%;
+  background: #DC143C;
+  animation-delay: 0s;
+}
+
+.firework-2 {
+  top: 30%;
+  right: 25%;
+  background: #FFD700;
+  animation-delay: 0.5s;
+}
+
+.firework-3 {
+  bottom: 30%;
+  left: 30%;
+  background: #FF0000;
+  animation-delay: 1s;
+}
+
+.firework-4 {
+  bottom: 20%;
+  right: 20%;
+  background: #FFA500;
+  animation-delay: 1.5s;
+}
+
+@keyframes firework-explosion {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #DC143C, #FFD700);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #FF0000, #FFA500);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom focus styles */
+*:focus {
+  outline: 2px solid #FFD700;
+  outline-offset: 2px;
+}
+
+/* Custom selection */
+::selection {
+  background: rgba(255, 215, 0, 0.3);
+  color: white;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom utility classes */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.backdrop-blur-xs {
+  backdrop-filter: blur(2px);
+}
+
+/* Loading animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Glow effects */
+.glow-red {
+  box-shadow: 0 0 20px rgba(220, 20, 60, 0.5);
+}
+
+.glow-yellow {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.glow-red-lg {
+  box-shadow: 0 0 40px rgba(220, 20, 60, 0.7);
+}
+
+.glow-yellow-lg {
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
+}

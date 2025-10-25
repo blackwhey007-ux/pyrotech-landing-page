@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-white/10;
+  }
+  
+  body {
+    @apply bg-black text-white font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Firework CSS animations for fallback */
+  .firework-css-animation {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .firework {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    animation: firework 2s ease-out infinite;
+  }
+
+  .firework-1 {
+    top: 20%;
+    left: 20%;
+    background: #DC143C;
+    animation-delay: 0s;
+  }
+
+  .firework-2 {
+    top: 30%;
+    right: 25%;
+    background: #FFD700;
+    animation-delay: 0.5s;
+  }
+
+  .firework-3 {
+    bottom: 30%;
+    left: 30%;
+    background: #FFA500;
+    animation-delay: 1s;
+  }
+
+  .firework-4 {
+    bottom: 20%;
+    right: 20%;
+    background: #FF0000;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes firework {
+    0% {
+      opacity: 1;
+      transform: scale(0);
+      box-shadow: 0 0 0 0 currentColor;
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+      box-shadow: 0 0 20px 10px currentColor;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.5);
+      box-shadow: 0 0 40px 20px transparent;
+    }
+  }
+}
