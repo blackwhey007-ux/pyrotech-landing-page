@@ -2,7 +2,12 @@
 // This helps reduce noise from common development warnings
 
 export const suppressConsoleWarnings = () => {
-  if (typeof process !== 'undefined' && process.env.NODE_ENV === 'development') {
+  // Check for development mode in browser environment
+  const isDevelopment = typeof window !== 'undefined' 
+    ? window.location.hostname === 'localhost' || window.location.hostname.includes('127.0.0.1')
+    : typeof process !== 'undefined' && process.env?.NODE_ENV === 'development';
+    
+  if (isDevelopment) {
     // Suppress common Three.js warnings
     const originalWarn = console.warn;
     console.warn = (...args) => {
