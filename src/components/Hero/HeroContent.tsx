@@ -1,10 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Button from '../shared/Button';
 
 const HeroContent: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center">
@@ -59,7 +60,18 @@ const HeroContent: React.FC = () => {
           variant="secondary"
           size="lg"
           className="min-w-[200px] shadow-lg"
-          onClick={() => navigate('/contact-us')}
+          onClick={() => {
+            // If on home page, scroll to pricing section
+            if (location.pathname === '/') {
+              const pricingElement = document.getElementById('pricing');
+              if (pricingElement) {
+                pricingElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            } else {
+              // If on other pages, navigate to contact
+              navigate('/contact-us');
+            }
+          }}
         >
           Pakete ansehen
         </Button>
