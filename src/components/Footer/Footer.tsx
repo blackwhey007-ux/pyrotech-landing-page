@@ -141,7 +141,7 @@ const Footer: React.FC = () => {
             {/* Address */}
             <div className="flex items-center gap-2 text-text-secondary text-xs md:text-sm text-center md:text-left">
               <MapPin className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
-              <span className="break-words">Arcadiastraße, 40472 Düsseldorf Rath</span>
+              <span className="break-words">Arcadiastr.24, 40472 Düsseldorf</span>
             </div>
           </div>
         </motion.div>
@@ -164,14 +164,6 @@ const Footer: React.FC = () => {
             <a href="#" className="hover:text-primary-yellow transition-colors duration-300">
               Datenschutz
             </a>
-            <span className="hidden md:inline">•</span>
-            <a href="#" className="hover:text-primary-yellow transition-colors duration-300">
-              Cookie-Einstellungen
-            </a>
-          </div>
-          
-          <div className="text-xs md:text-sm">
-            Made with ❤️ in Deutschland
           </div>
         </motion.div>
       </div>
