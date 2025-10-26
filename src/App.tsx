@@ -1,18 +1,11 @@
 import { useEffect } from 'react';
-import AnnouncementBar from './components/AnnouncementBar/AnnouncementBar';
-import Hero from './components/Hero/Hero';
-import EventGrid from './components/EventCards/EventGrid';
-import PricingSection from './components/Pricing/PricingSection';
-import ProcessSection from './components/Process/ProcessSection';
-import TestimonialCarousel from './components/Testimonials/TestimonialCarousel';
-import VideoSection from './components/VideoShowcase/VideoSection';
-import InstagramSection from './components/Instagram/InstagramSection';
-import StorySection from './components/AboutUs/StorySection';
-import SectionSeparator from './components/shared/SectionSeparator';
-import UrgencyCTA from './components/CTASection/UrgencyCTA';
-import TrustBadges from './components/TrustBadges/TrustBadges';
-import ContactSection from './components/Contact/ContactSection';
-import Footer from './components/Footer/Footer';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Layout from './components/Layout/Layout';
+import HomePage from './pages/HomePage';
+import AboutUsPage from './pages/AboutUsPage';
+import ContactPage from './pages/ContactPage';
+import ReviewsPage from './pages/ReviewsPage';
+import SocialFeedsPage from './pages/SocialFeedsPage';
 import './App.css';
 
 function App() {
@@ -41,22 +34,19 @@ function App() {
     document.addEventListener('click', handleGlobalClick);
     return () => document.removeEventListener('click', handleGlobalClick);
   }, []);
+
   return (
     <div className="App">
-      <AnnouncementBar />
-      <Hero />
-      <EventGrid />
-      <PricingSection />
-      <ProcessSection />
-      <TestimonialCarousel />
-      <VideoSection />
-      <InstagramSection />
-      <SectionSeparator />
-      <StorySection />
-      <UrgencyCTA />
-      <TrustBadges />
-      <ContactSection />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="about-us" element={<AboutUsPage />} />
+          <Route path="contact-us" element={<ContactPage />} />
+          <Route path="reviews" element={<ReviewsPage />} />
+          <Route path="social-feeds" element={<SocialFeedsPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

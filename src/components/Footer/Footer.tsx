@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Phone, 
@@ -26,11 +27,11 @@ const Footer: React.FC = () => {
     {
       title: 'Unternehmen',
       links: [
-        { name: 'Über Uns', href: '#' },
-        { name: 'Team', href: '#' },
-        { name: 'Karriere', href: '#' },
-        { name: 'Presse', href: '#' },
-        { name: 'Partner', href: '#' }
+        { name: 'Über Uns', href: '/about-us', isInternal: true },
+        { name: 'Kontakt', href: '/contact-us', isInternal: true },
+        { name: 'Bewertungen', href: '/reviews', isInternal: true },
+        { name: 'Presse', href: '#', isInternal: false },
+        { name: 'Partner', href: '#', isInternal: false }
       ]
     },
     {
@@ -75,6 +76,13 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => {
                   const IconComponent = 'icon' in link ? link.icon : null;
+                  const isInternal = 'isInternal' in link ? link.isInternal : false;
+                  
+                  const linkClassName = `
+                    flex items-center gap-2 text-text-secondary hover:text-primary-yellow 
+                    transition-colors duration-300 group
+                    ${'highlight' in link && link.highlight ? 'font-semibold text-primary-yellow' : ''}
+                  `;
                   
                   return (
                     <motion.li
@@ -88,19 +96,27 @@ const Footer: React.FC = () => {
                       }}
                       viewport={{ once: true }}
                     >
-                      <a
-                        href={link.href}
-                        className={`
-                          flex items-center gap-2 text-text-secondary hover:text-primary-yellow 
-                          transition-colors duration-300 group
-                          ${'highlight' in link && link.highlight ? 'font-semibold text-primary-yellow' : ''}
-                        `}
-                      >
-                        {IconComponent && (
-                          <IconComponent className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                        )}
-                        <span>{link.name}</span>
-                      </a>
+                      {isInternal ? (
+                        <Link
+                          to={link.href}
+                          className={linkClassName}
+                        >
+                          {IconComponent && (
+                            <IconComponent className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                          )}
+                          <span>{link.name}</span>
+                        </Link>
+                      ) : (
+                        <a
+                          href={link.href}
+                          className={linkClassName}
+                        >
+                          {IconComponent && (
+                            <IconComponent className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                          )}
+                          <span>{link.name}</span>
+                        </a>
+                      )}
                     </motion.li>
                   );
                 })}

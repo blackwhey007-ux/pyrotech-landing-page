@@ -1,9 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Button from '../shared/Button';
-// Direct scroll implementation - no import needed
 
 const UrgencyCTA: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative py-20 px-4 bg-black overflow-hidden">
       {/* Animated Background */}
@@ -97,16 +99,7 @@ const UrgencyCTA: React.FC = () => {
             variant="primary"
             size="lg"
             className="text-xl px-12 py-4"
-            onClick={() => {
-              console.log('🔥 UrgencyCTA button clicked');
-              const contactElement = document.getElementById('contact');
-              if (contactElement) {
-                contactElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                console.log('✅ Scrolled to contact');
-              } else {
-                console.error('❌ Contact element not found!');
-              }
-            }}
+            onClick={() => navigate('/contact-us')}
           >
             Verfügbarkeit Prüfen 🔥
           </Button>

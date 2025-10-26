@@ -27,3 +27,6 @@ Once the server is running:
 6. Watch console for debug messages
 7. Verify smooth scroll to contact form
 
+
+
+
