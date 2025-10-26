@@ -61,15 +61,29 @@ const HeroContent: React.FC = () => {
           size="lg"
           className="min-w-[200px] shadow-lg"
           onClick={() => {
-            // If on home page, scroll to pricing section
+            // On home page, scroll to pricing after a small delay
             if (location.pathname === '/') {
-              const pricingElement = document.getElementById('pricing');
-              if (pricingElement) {
-                pricingElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
+              setTimeout(() => {
+                const pricingElement = document.getElementById('pricing');
+                if (pricingElement) {
+                  window.scrollTo({
+                    top: pricingElement.offsetTop - 80,
+                    behavior: 'smooth'
+                  });
+                }
+              }, 50);
             } else {
-              // If on other pages, navigate to contact
-              navigate('/contact-us');
+              // On other pages, navigate to home then scroll
+              navigate('/');
+              setTimeout(() => {
+                const pricingElement = document.getElementById('pricing');
+                if (pricingElement) {
+                  window.scrollTo({
+                    top: pricingElement.offsetTop - 80,
+                    behavior: 'smooth'
+                  });
+                }
+              }, 100);
             }
           }}
         >
