@@ -220,12 +220,6 @@ export const TRUST_BADGES: TrustBadge[] = [
     icon: 'Award'
   },
   {
-    id: '500-plus-events',
-    title: '500+ Events',
-    description: 'Erfolgreiche Projekte',
-    icon: 'Trophy'
-  },
-  {
     id: 'bundesweit',
     title: 'Bundesweit',
     description: 'Deutschlandweite Verfügbarkeit',
