@@ -59,15 +59,7 @@ const HeroContent: React.FC = () => {
           variant="secondary"
           size="lg"
           className="min-w-[200px] shadow-lg"
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            const pricingElement = document.getElementById('pricing');
-            if (pricingElement) {
-              setTimeout(() => {
-                pricingElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }, 100);
-            }
-          }}
+          onClick={() => navigate('/contact-us')}
         >
           Pakete ansehen
         </Button>
