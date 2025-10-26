@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import HeaderBackground3D from './HeaderBackground3D';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,12 +33,16 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/60 backdrop-blur-sm md:transition-all md:duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black overflow-hidden md:transition-all md:duration-300 ${
         isScrolled
           ? 'md:bg-black/80 md:backdrop-blur-lg shadow-lg border-b border-yellow-500/20'
           : 'md:bg-black/40 md:backdrop-blur-sm'
       }`}
     >
+      {/* 3D Background Animation - Mobile Only */}
+      <div className="md:hidden">
+        <HeaderBackground3D />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20 relative">
           {/* Mobile Menu Button - Right Side */}
