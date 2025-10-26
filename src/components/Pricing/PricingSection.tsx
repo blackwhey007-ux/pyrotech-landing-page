@@ -40,7 +40,7 @@ const PricingSection: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 max-w-5xl mx-auto">
             {PRICING_EXTRAS.map((extra) => (
               <div
                 key={extra.id}

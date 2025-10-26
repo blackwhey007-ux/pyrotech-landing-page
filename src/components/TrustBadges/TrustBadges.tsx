@@ -22,8 +22,8 @@ const TrustBadges: React.FC = () => {
 
   return (
     <section className="py-16 px-4 bg-black">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      <div className="max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {TRUST_BADGES.map((badge, index) => {
             const IconComponent = iconMap[badge.icon as keyof typeof iconMap];
             
