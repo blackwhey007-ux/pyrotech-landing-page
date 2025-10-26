@@ -208,21 +208,15 @@ export const PROCESS_STEPS: ProcessStep[] = [
 
 export const TRUST_BADGES: TrustBadge[] = [
   {
-    id: 'tuv-zertifiziert',
-    title: 'TÜV Zertifiziert',
-    description: 'Qualitätssicherung',
-    icon: 'Shield'
-  },
-  {
     id: 'voll-versichert',
     title: 'Voll Versichert',
     description: 'Umfassender Schutz',
     icon: 'ShieldCheck'
   },
   {
-    id: '15-jahre-erfahrung',
-    title: '15 Jahre Erfahrung',
-    description: 'Langjährige Expertise',
+    id: 'erfahrung',
+    title: 'Professionelle Expertise',
+    description: 'Spitzenqualität',
     icon: 'Award'
   },
   {
