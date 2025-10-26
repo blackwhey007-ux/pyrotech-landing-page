@@ -19,22 +19,6 @@ export const EVENT_CARDS: EventCard[] = [
     accentColor: 'gold'
   },
   {
-    id: 'festivals',
-    title: 'Festivals',
-    description: 'Spektakuläre Großfeuerwerke für Veranstaltungen',
-    icon: '🎪',
-    image: EVENT_IMAGES.festivals,
-    accentColor: 'red'
-  },
-  {
-    id: 'stadtfeste',
-    title: 'Stadtfeste',
-    description: 'Große Veranstaltungen mit beeindruckenden Shows',
-    icon: '🎉',
-    image: EVENT_IMAGES.stadtfeste,
-    accentColor: 'gold'
-  },
-  {
     id: 'geburtstage',
     title: 'Geburtstage',
     description: 'Besondere Momente mit personalisierten Effekten',
@@ -57,14 +41,6 @@ export const EVENT_CARDS: EventCard[] = [
     icon: '💝',
     image: EVENT_IMAGES.jahrestage,
     accentColor: 'red'
-  },
-  {
-    id: 'produktlaunches',
-    title: 'Produktlaunches',
-    description: 'Brand-Events mit spektakulären Effekten',
-    icon: '🚀',
-    image: EVENT_IMAGES.produktlaunches,
-    accentColor: 'gold'
   },
   {
     id: 'gender-reveal',
