@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
                   {section.title}
                 </h3>
               )}
-              <ul className={`${'isHorizontal' in section && section.isHorizontal ? 'flex flex-wrap justify-center md:justify-start gap-3 md:gap-4 space-y-0' : 'space-y-1.5 md:space-y-3'}`}>
+              <ul className={`${'isHorizontal' in section && section.isHorizontal ? 'flex flex-nowrap justify-center items-center gap-4 md:gap-6' : 'space-y-1.5 md:space-y-3'}`}>
                 {section.links.map((link, linkIndex) => {
                   const IconComponent = 'icon' in link ? link.icon : null;
                   const isInternal = 'isInternal' in link ? link.isInternal : false;
