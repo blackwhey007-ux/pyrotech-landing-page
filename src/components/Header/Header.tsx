@@ -45,17 +45,17 @@ const Header: React.FC = () => {
           <div className="flex-1 md:hidden" />
 
           {/* Logo - Centered on Mobile */}
-          <Link to="/" className="flex items-center space-x-2 md:space-x-3 group absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none">
+          <Link to="/" className="flex items-center gap-2 md:space-x-3 group absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none">
             <div className="relative">
               <motion.img
                 src="/images/logo/Pyrotech-logo.jpg"
                 alt="Pyrotech Event Logo"
-                className="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover group-hover:ring-2 group-hover:ring-yellow-400/50 transition-all duration-300"
+                className="h-9 w-9 md:h-12 md:w-12 rounded-full object-cover group-hover:ring-2 group-hover:ring-yellow-400/50 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               />
             </div>
-            <span className="text-lg md:text-2xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent text-center">
+            <span className="text-sm md:text-2xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent whitespace-nowrap">
               Pyrotech Event
             </span>
           </Link>
