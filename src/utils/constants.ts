@@ -67,36 +67,12 @@ export const EVENT_CARDS: EventCard[] = [
     accentColor: 'gold'
   },
   {
-    id: 'konzerte',
-    title: 'Konzerte',
-    description: 'Musik-synchronisierte Pyrotechnik-Shows',
-    icon: '🎵',
-    image: EVENT_IMAGES.konzerte,
+    id: 'gender-reveal',
+    title: 'Gender Reveal',
+    description: 'Magische Enthüllung des Geschlechts',
+    icon: '🎊',
+    image: EVENT_IMAGES.hochzeiten, // Using existing image as placeholder
     accentColor: 'red'
-  },
-  {
-    id: 'sportevents',
-    title: 'Sportevents',
-    description: 'Stadion-Shows für große Sportveranstaltungen',
-    icon: '⚽',
-    image: EVENT_IMAGES.sportevents,
-    accentColor: 'gold'
-  },
-  {
-    id: 'hochzeitstaenze',
-    title: 'Hochzeitstänze',
-    description: 'Indoor Sparklers für den ersten Tanz',
-    icon: '💃',
-    image: EVENT_IMAGES.hochzeitstaenze,
-    accentColor: 'red'
-  },
-  {
-    id: 'heiratsantraege',
-    title: 'Heiratsanträge',
-    description: 'Magische Momente mit speziellen Effekten',
-    icon: '💍',
-    image: EVENT_IMAGES.heiratsantraege,
-    accentColor: 'gold'
   }
 ];
 
