@@ -33,7 +33,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black md:transition-all md:duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/60 backdrop-blur-sm md:transition-all md:duration-300 ${
         isScrolled
           ? 'md:bg-black/80 md:backdrop-blur-lg shadow-lg border-b border-yellow-500/20'
           : 'md:bg-black/40 md:backdrop-blur-sm'
