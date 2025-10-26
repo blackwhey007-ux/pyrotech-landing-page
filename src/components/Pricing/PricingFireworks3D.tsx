@@ -41,6 +41,19 @@ interface Firework {
   pattern: 'spherical' | 'willow' | 'palm' | 'chrysanthemum' | 'ring';
 }
 
+// Helper function to validate and clean position values
+const isValidPosition = (value: number): boolean => {
+  return !isNaN(value) && isFinite(value);
+};
+
+const validateVector3 = (pos: [number, number, number]): [number, number, number] => {
+  return [
+    isValidPosition(pos[0]) ? pos[0] : 0,
+    isValidPosition(pos[1]) ? pos[1] : 0,
+    isValidPosition(pos[2]) ? pos[2] : 0
+  ];
+};
+
 const FireworkParticleSystem: React.FC = () => {
   const pointsRef = useRef<THREE.Points>(null);
   const [fireworks, setFireworks] = useState<Firework[]>([]);
@@ -216,20 +229,28 @@ const FireworkParticleSystem: React.FC = () => {
     fireworks.forEach(firework => {
       // Update explosion particles
       firework.particles.forEach(particle => {
-        allParticles.push(particle.position[0], particle.position[1], particle.position[2]);
-        
-        const color = new THREE.Color(particle.color);
-        allColors.push(color.r, color.g, color.b);
-        allSizes.push(particle.size);
+        // Validate position values
+        const pos = validateVector3(particle.position);
+        if (pos[0] !== 0 || pos[1] !== 0 || pos[2] !== 0) {
+          allParticles.push(pos[0], pos[1], pos[2]);
+          
+          const color = new THREE.Color(particle.color);
+          allColors.push(color.r, color.g, color.b);
+          allSizes.push(particle.size);
+        }
       });
 
       // Update launch particles
       firework.launchParticles.forEach(particle => {
-        allParticles.push(particle.position[0], particle.position[1], particle.position[2]);
-        
-        const color = new THREE.Color(particle.color);
-        allColors.push(color.r, color.g, color.b);
-        allSizes.push(particle.size);
+        // Validate position values
+        const pos = validateVector3(particle.position);
+        if (pos[0] !== 0 || pos[1] !== 0 || pos[2] !== 0) {
+          allParticles.push(pos[0], pos[1], pos[2]);
+          
+          const color = new THREE.Color(particle.color);
+          allColors.push(color.r, color.g, color.b);
+          allSizes.push(particle.size);
+        }
       });
     });
 

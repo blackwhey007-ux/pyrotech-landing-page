@@ -2,20 +2,20 @@
 // In production, replace with actual image URLs
 
 export const getImagePlaceholder = (_category: string, name: string, width: number = 400, height: number = 300): string => {
-  // For development, use placeholder.com service with error handling
-  // In production, replace with actual image paths
+  // Use local SVG data URL instead of external placeholder service
+  // This avoids ERR_NAME_NOT_RESOLVED errors
   try {
-    const encodedName = encodeURIComponent(name);
-    return `https://via.placeholder.com/${width}x${height}/1a1a1a/FFD700?text=${encodedName}`;
-  } catch (error) {
-    console.warn('Error generating placeholder URL:', error);
-    // Fallback to a simple data URL
-    return `data:image/svg+xml;base64,${btoa(`
+    const svg = `
       <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
         <rect width="100%" height="100%" fill="#1a1a1a"/>
-        <text x="50%" y="50%" font-family="Arial" font-size="14" fill="#FFD700" text-anchor="middle" dy=".3em">${name}</text>
+        <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="16" fill="#FFD700" text-anchor="middle" dy=".3em">${name}</text>
       </svg>
-    `)}`;
+    `;
+    return `data:image/svg+xml;base64,${btoa(svg)}`;
+  } catch (error) {
+    console.warn('Error generating placeholder:', error);
+    // Ultimate fallback - solid dark background
+    return `data:image/svg+xml;base64,${btoa(`<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#1a1a1a"/></svg>`)}`;
   }
 };
 
