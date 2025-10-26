@@ -31,13 +31,14 @@ const Footer: React.FC = () => {
       ]
     },
     {
-      title: 'Social Media',
+      title: '',
       links: [
         { name: 'Instagram', href: 'https://www.instagram.com/pyrotech.event/', icon: Instagram },
         { name: 'Facebook', href: '#', icon: Facebook },
         { name: 'YouTube', href: '#', icon: Youtube }
       ],
-      isHorizontal: true
+      isHorizontal: true,
+      hideTitle: true
     }
   ];
 
@@ -54,9 +55,11 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6, ease: "easeOut", delay: sectionIndex * 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-white font-bold text-sm md:text-lg mb-3 md:mb-6">
-                {section.title}
-              </h3>
+              {!('hideTitle' in section && section.hideTitle) && (
+                <h3 className="text-white font-bold text-sm md:text-lg mb-3 md:mb-6">
+                  {section.title}
+                </h3>
+              )}
               <ul className={`${'isHorizontal' in section && section.isHorizontal ? 'flex flex-wrap justify-center md:justify-start gap-3 md:gap-4 space-y-0' : 'space-y-1.5 md:space-y-3'}`}>
                 {section.links.map((link, linkIndex) => {
                   const IconComponent = 'icon' in link ? link.icon : null;
