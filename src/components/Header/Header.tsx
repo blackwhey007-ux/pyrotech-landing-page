@@ -25,7 +25,6 @@ const Header: React.FC = () => {
     { path: '/', label: 'Startseite' },
     { path: '/about-us', label: 'Über Uns' },
     { path: '/contact-us', label: 'Kontakt' },
-    { path: '/reviews', label: 'Bewertungen' },
     { path: '/social-feeds', label: 'Social Media' },
   ];
 
