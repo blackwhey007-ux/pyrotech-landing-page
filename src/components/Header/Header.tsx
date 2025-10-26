@@ -52,9 +52,11 @@ const Header: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
               />
             </div>
-            <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-              Pyrotech Event
-            </span>
+            <img
+              src="/images/logo/pyrotech-event-logo.svg"
+              alt="Pyrotech Event"
+              className="h-8 md:h-10 w-auto group-hover:opacity-80 transition-all duration-300"
+            />
           </Link>
 
           {/* Desktop Navigation */}
