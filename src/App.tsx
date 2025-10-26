@@ -6,6 +6,7 @@ import AboutUsPage from './pages/AboutUsPage';
 import ContactPage from './pages/ContactPage';
 import ReviewsPage from './pages/ReviewsPage';
 import SocialFeedsPage from './pages/SocialFeedsPage';
+import ImpressumPage from './pages/ImpressumPage';
 import './App.css';
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Route path="contact-us" element={<ContactPage />} />
           <Route path="reviews" element={<ReviewsPage />} />
           <Route path="social-feeds" element={<SocialFeedsPage />} />
+          <Route path="impressum" element={<ImpressumPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>

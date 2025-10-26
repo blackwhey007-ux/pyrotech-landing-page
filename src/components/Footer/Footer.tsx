@@ -168,9 +168,9 @@ const Footer: React.FC = () => {
           <div className="flex flex-wrap items-center gap-4">
             <span>© 2025 Pyrotech GmbH</span>
             <span>•</span>
-            <a href="#" className="hover:text-primary-yellow transition-colors duration-300">
+            <Link to="/impressum" className="hover:text-primary-yellow transition-colors duration-300">
               Impressum
-            </a>
+            </Link>
             <span>•</span>
             <a href="#" className="hover:text-primary-yellow transition-colors duration-300">
               Datenschutz
