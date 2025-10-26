@@ -28,10 +28,10 @@ const HeroContent: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
       >
-        <h2 className="text-xl md:text-3xl font-semibold text-white mb-3 drop-shadow-md">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-md">
           Willkommen bei Pyrotech Event
         </h2>
-        <h3 className="text-xl md:text-3xl lg:text-4xl font-bold font-heading bg-gradient-primary bg-clip-text text-transparent mb-4 leading-tight drop-shadow-lg">
+        <h3 className="text-lg md:text-2xl lg:text-3xl font-semibold text-yellow-400 mb-4 leading-tight drop-shadow-lg">
           DIE FEUERWERK-EXPERTEN FÜR<br />
           UNVERGESSLICHE MOMENTE
         </h3>
