@@ -22,11 +22,11 @@ const Header: React.FC = () => {
   }, [location.pathname]);
 
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about-us', label: 'About Us' },
-    { path: '/contact-us', label: 'Contact Us' },
-    { path: '/reviews', label: 'Reviews' },
-    { path: '/social-feeds', label: 'Social Feeds' },
+    { path: '/', label: 'Startseite' },
+    { path: '/about-us', label: 'Über Uns' },
+    { path: '/contact-us', label: 'Kontakt' },
+    { path: '/reviews', label: 'Bewertungen' },
+    { path: '/social-feeds', label: 'Social Media' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
