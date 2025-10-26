@@ -91,27 +91,6 @@ const HeroContent: React.FC = () => {
         </Button>
       </motion.div>
 
-      {/* Trust Indicators */}
-      <motion.div
-        className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-xs md:text-sm"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-      >
-        <div className="flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm">
-          <span className="text-xl md:text-2xl">🔥</span>
-          <span className="text-white font-medium drop-shadow-md">500+ Events</span>
-        </div>
-        <div className="flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm">
-          <span className="text-xl md:text-2xl">⭐</span>
-          <span className="text-white font-medium drop-shadow-md">15 Jahre Erfahrung</span>
-        </div>
-        <div className="flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm">
-          <span className="text-xl md:text-2xl">🛡️</span>
-          <span className="text-white font-medium drop-shadow-md">TÜV-zertifiziert</span>
-        </div>
-      </motion.div>
-
       {/* Scroll Indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
