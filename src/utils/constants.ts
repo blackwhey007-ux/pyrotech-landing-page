@@ -31,7 +31,7 @@ export const EVENT_CARDS: EventCard[] = [
     title: 'Gender Reveal',
     description: 'Magische Enthüllung des Geschlechts',
     icon: '🎊',
-    image: EVENT_IMAGES.hochzeiten, // Using existing image as placeholder
+    image: EVENT_IMAGES['gender-reveal'],
     accentColor: 'red'
   }
 ];

@@ -20,12 +20,13 @@ export const getImagePlaceholder = (_category: string, name: string, width: numb
 };
 
 export const EVENT_IMAGES = {
-  hochzeiten: '/images/events/hochzeiten.jpg', // Real wedding fireworks image
+  hochzeiten: '/images/events/hochzeiten.png', // Real wedding fireworks image
   geburtstage: '/images/events/geburtstage.png', // Real birthday sparkler image
+  silvester: '/images/events/silvester.png', // Real New Year fireworks image
+  'gender-reveal': '/images/events/gender-reveal.png', // Real gender reveal image
   firmenfeiern: getImagePlaceholder('events', 'Firmenfeiern', 380, 280),
   festivals: getImagePlaceholder('events', 'Festivals', 380, 280),
   stadtfeste: getImagePlaceholder('events', 'Stadtfeste', 380, 280),
-  silvester: getImagePlaceholder('events', 'Silvester', 380, 280),
   jahrestage: getImagePlaceholder('events', 'Jahrestage', 380, 280),
   produktlaunches: getImagePlaceholder('events', 'Produktlaunches', 380, 280),
   konzerte: getImagePlaceholder('events', 'Konzerte', 380, 280),
