@@ -122,20 +122,15 @@ const Footer: React.FC = () => {
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Logo */}
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col items-center gap-2">
               <img
                 src="/images/logo/Pyrotech-logo.jpg"
                 alt="Pyrotech Event Logo"
                 className="w-12 h-12 rounded-full object-cover"
               />
-              <div>
-                <h2 className="text-xl md:text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                  PYROTECH Event
-                </h2>
-                <p className="text-text-secondary text-xs md:text-sm">
-                  Die Feuerwerk-Experten
-                </p>
-              </div>
+              <p className="text-text-secondary text-xs md:text-sm text-center">
+                Die Feuerwerk-Experten
+              </p>
             </div>
 
             {/* Address */}
