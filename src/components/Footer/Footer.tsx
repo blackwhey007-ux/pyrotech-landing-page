@@ -136,12 +136,14 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Logo */}
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center">
-                <span className="text-black font-bold text-lg">P</span>
-              </div>
+              <img
+                src="/images/logo/Pyrotech-logo.jpg"
+                alt="Pyrotech Event Logo"
+                className="w-12 h-12 rounded-full object-cover"
+              />
               <div>
                 <h2 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                  PYROTECH
+                  PYROTECH Event
                 </h2>
                 <p className="text-text-secondary text-sm">
                   Die Feuerwerk-Experten
@@ -152,7 +154,7 @@ const Footer: React.FC = () => {
             {/* Address */}
             <div className="flex items-center gap-2 text-text-secondary text-sm">
               <MapPin className="w-4 h-4" />
-              <span>Feuerwerk-Straße 15, 40213 Düsseldorf</span>
+              <span>Arcadiastraße, 40472 Düsseldorf Rath</span>
             </div>
           </div>
         </motion.div>
