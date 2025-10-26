@@ -14,43 +14,26 @@ import {
 const Footer: React.FC = () => {
   const footerSections = [
     {
-      title: 'Veranstaltungen',
-      links: [
-        { name: 'Hochzeiten', href: '#' },
-        { name: 'Firmenfeiern', href: '#' },
-        { name: 'Festivals', href: '#' },
-        { name: 'Geburtstage', href: '#' },
-        { name: 'Silvester', href: '#' },
-        { name: 'Alle Events →', href: '#', highlight: true }
-      ]
-    },
-    {
-      title: 'Unternehmen',
+      title: 'Navigation',
       links: [
         { name: 'Über Uns', href: '/about-us', isInternal: true },
         { name: 'Kontakt', href: '/contact-us', isInternal: true },
         { name: 'Bewertungen', href: '/reviews', isInternal: true },
-        { name: 'Presse', href: '#', isInternal: false },
-        { name: 'Partner', href: '#', isInternal: false }
+        { name: 'Social Media', href: '/social-feeds', isInternal: true }
       ]
     },
     {
       title: 'Service',
       links: [
-        { name: 'FAQ', href: '#' },
-        { name: 'Genehmigungen', href: '#' },
-        { name: 'Sicherheit', href: '#' },
-        { name: 'AGB', href: '#' },
-        { name: 'Versicherung', href: '#' }
+        { name: 'Telefon', href: 'tel:+492119998877', icon: Phone },
+        { name: 'E-Mail', href: 'mailto:pyrotechevent@gmx.de', icon: Mail },
+        { name: 'WhatsApp', href: 'https://wa.me/491601203077', icon: MessageCircle }
       ]
     },
     {
-      title: 'Kontakt',
+      title: 'Social Media',
       links: [
-        { name: 'Telefon', href: 'tel:+492119998877', icon: Phone },
-        { name: 'E-Mail', href: 'mailto:info@pyrotech.de', icon: Mail },
-        { name: 'WhatsApp', href: 'https://wa.me/4917612345678', icon: MessageCircle },
-        { name: 'Instagram', href: '#', icon: Instagram },
+        { name: 'Instagram', href: 'https://www.instagram.com/pyrotech.event/', icon: Instagram },
         { name: 'Facebook', href: '#', icon: Facebook },
         { name: 'YouTube', href: '#', icon: Youtube }
       ]
@@ -59,9 +42,9 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-black border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
           {footerSections.map((section, sectionIndex) => (
             <motion.div
               key={section.title}
@@ -70,10 +53,10 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6, ease: "easeOut", delay: sectionIndex * 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-white font-bold text-lg mb-6">
+              <h3 className="text-white font-bold text-base md:text-lg mb-4 md:mb-6">
                 {section.title}
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2 md:space-y-3">
                 {section.links.map((link, linkIndex) => {
                   const IconComponent = 'icon' in link ? link.icon : null;
                   const isInternal = 'isInternal' in link ? link.isInternal : false;
@@ -127,7 +110,7 @@ const Footer: React.FC = () => {
 
         {/* Company Info */}
         <motion.div
-          className="border-t border-white/10 pt-8 mb-8"
+          className="border-t border-white/10 pt-6 md:pt-8 mb-6 md:mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -142,48 +125,48 @@ const Footer: React.FC = () => {
                 className="w-12 h-12 rounded-full object-cover"
               />
               <div>
-                <h2 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                <h2 className="text-xl md:text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                   PYROTECH Event
                 </h2>
-                <p className="text-text-secondary text-sm">
+                <p className="text-text-secondary text-xs md:text-sm">
                   Die Feuerwerk-Experten
                 </p>
               </div>
             </div>
 
             {/* Address */}
-            <div className="flex items-center gap-2 text-text-secondary text-sm">
-              <MapPin className="w-4 h-4" />
-              <span>Arcadiastraße, 40472 Düsseldorf Rath</span>
+            <div className="flex items-center gap-2 text-text-secondary text-xs md:text-sm text-center md:text-left">
+              <MapPin className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
+              <span className="break-words">Arcadiastraße, 40472 Düsseldorf Rath</span>
             </div>
           </div>
         </motion.div>
 
         {/* Bottom Bar */}
         <motion.div
-          className="flex flex-col md:flex-row items-center justify-between gap-4 text-text-secondary text-sm"
+          className="flex flex-col items-center justify-center gap-3 text-text-secondary text-xs md:text-sm text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-wrap items-center gap-4">
-            <span>© 2025 Pyrotech GmbH</span>
-            <span>•</span>
+          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4">
+            <span>© 2025 Pyrotech Event</span>
+            <span className="hidden md:inline">•</span>
             <Link to="/impressum" className="hover:text-primary-yellow transition-colors duration-300">
               Impressum
             </Link>
-            <span>•</span>
+            <span className="hidden md:inline">•</span>
             <a href="#" className="hover:text-primary-yellow transition-colors duration-300">
               Datenschutz
             </a>
-            <span>•</span>
+            <span className="hidden md:inline">•</span>
             <a href="#" className="hover:text-primary-yellow transition-colors duration-300">
               Cookie-Einstellungen
             </a>
           </div>
           
-          <div className="text-xs">
+          <div className="text-xs md:text-sm">
             Made with ❤️ in Deutschland
           </div>
         </motion.div>
