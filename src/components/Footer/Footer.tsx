@@ -42,9 +42,9 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-black border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
+      <div className="max-w-7xl mx-auto px-4 py-6 md:py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-6 md:mb-12">
           {footerSections.map((section, sectionIndex) => (
             <motion.div
               key={section.title}
@@ -53,10 +53,10 @@ const Footer: React.FC = () => {
               transition={{ duration: 0.6, ease: "easeOut", delay: sectionIndex * 0.1 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-white font-bold text-base md:text-lg mb-4 md:mb-6">
+              <h3 className="text-white font-bold text-sm md:text-lg mb-3 md:mb-6">
                 {section.title}
               </h3>
-              <ul className="space-y-2 md:space-y-3">
+              <ul className="space-y-1.5 md:space-y-3">
                 {section.links.map((link, linkIndex) => {
                   const IconComponent = 'icon' in link ? link.icon : null;
                   const isInternal = 'isInternal' in link ? link.isInternal : false;
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
                           {IconComponent && (
                             <IconComponent className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                           )}
-                          <span>{link.name}</span>
+                          <span className="text-xs md:text-sm">{link.name}</span>
                         </Link>
                       ) : (
                         <a
@@ -95,9 +95,9 @@ const Footer: React.FC = () => {
                           className={linkClassName}
                         >
                           {IconComponent && (
-                            <IconComponent className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                            <IconComponent className="w-3 h-3 md:w-4 md:h-4 group-hover:scale-110 transition-transform duration-300" />
                           )}
-                          <span>{link.name}</span>
+                          <span className="text-xs md:text-sm">{link.name}</span>
                         </a>
                       )}
                     </motion.li>
