@@ -11,14 +11,6 @@ export const EVENT_CARDS: EventCard[] = [
     accentColor: 'red'
   },
   {
-    id: 'firmenfeiern',
-    title: 'Firmenfeiern',
-    description: 'Professionelle Pyrotechnik für Corporate Events',
-    icon: '🏢',
-    image: EVENT_IMAGES.firmenfeiern,
-    accentColor: 'gold'
-  },
-  {
     id: 'geburtstage',
     title: 'Geburtstage',
     description: 'Besondere Momente mit personalisierten Effekten',
@@ -33,14 +25,6 @@ export const EVENT_CARDS: EventCard[] = [
     icon: '🎆',
     image: EVENT_IMAGES.silvester,
     accentColor: 'gold'
-  },
-  {
-    id: 'jahrestage',
-    title: 'Jahrestage',
-    description: 'Romantische Effekte für besondere Anlässe',
-    icon: '💝',
-    image: EVENT_IMAGES.jahrestage,
-    accentColor: 'red'
   },
   {
     id: 'gender-reveal',
