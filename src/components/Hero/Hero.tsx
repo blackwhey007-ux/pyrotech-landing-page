@@ -1,5 +1,4 @@
 import React from 'react';
-import Fireworks3D from './Fireworks3D';
 import HeroContent from './HeroContent';
 
 const Hero: React.FC = () => {
@@ -16,9 +15,6 @@ const Hero: React.FC = () => {
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
       </div>
-
-      {/* 3D Fireworks Background (additional effect layer) */}
-      <Fireworks3D />
       
       {/* Hero Content */}
       <HeroContent />
