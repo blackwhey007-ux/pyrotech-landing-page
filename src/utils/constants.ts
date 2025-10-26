@@ -135,13 +135,6 @@ export const PRICING_EXTRAS: PricingExtra[] = [
     price: '189€',
     description: 'Spektakulärer Abschluss',
     icon: '🎆'
-  },
-  {
-    id: 'spezialeffekte',
-    name: 'Spezialeffekte',
-    price: '199€',
-    description: 'Einzigartige Effekte',
-    icon: '✨'
   }
 ];
 
