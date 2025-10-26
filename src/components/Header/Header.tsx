@@ -40,14 +40,9 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-gray-300 hover:text-yellow-400 transition-colors p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+        <div className="flex items-center justify-between h-16 md:h-20 relative">
+          {/* Mobile Menu Button - Right Side */}
+          <div className="flex-1 md:hidden" />
 
           {/* Logo - Centered on Mobile */}
           <Link to="/" className="flex items-center space-x-2 md:space-x-3 group absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none">
@@ -90,6 +85,14 @@ const Header: React.FC = () => {
               </Link>
             ))}
           </nav>
+
+          {/* Mobile Menu Button - Right Side */}
+          <button
+            className="md:hidden text-gray-300 hover:text-yellow-400 transition-colors p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
       </div>
 
