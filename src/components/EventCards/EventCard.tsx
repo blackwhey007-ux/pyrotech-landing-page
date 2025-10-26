@@ -40,7 +40,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
     >
       <motion.div
         className={`
-          relative w-full max-w-sm h-64 md:h-80 rounded-2xl overflow-hidden
+          relative w-full aspect-square rounded-xl overflow-hidden
           border-2 border-transparent transition-all duration-400
           ${isHovered ? `${accentColor} ${glowColor}` : 'border-white/10'}
           ${isHovered ? 'shadow-2xl' : 'shadow-lg'}
