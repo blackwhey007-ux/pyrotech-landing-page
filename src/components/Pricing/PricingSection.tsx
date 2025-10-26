@@ -1,39 +1,9 @@
-import { useEffect } from 'react';
 import { PRICING_TIERS, PRICING_EXTRAS } from '../../utils/constants';
 import PricingCard from './PricingCard';
 import SectionTitle from '../shared/SectionTitle';
 import PricingFireworks3D from './PricingFireworks3D';
 
 const PricingSection: React.FC = () => {
-  // Direct DOM manipulation fallback
-  useEffect(() => {
-    const handleDirectClick = (e: Event) => {
-      const target = e.target as HTMLElement;
-      const button = target.closest('[data-pricing-button]');
-      
-      if (button) {
-        console.log('🔥 Direct DOM click detected');
-        e.preventDefault();
-        e.stopPropagation();
-        
-        const contactElement = document.getElementById('contact');
-        if (contactElement) {
-          console.log('📍 Contact element found via DOM');
-          contactElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          console.log('✅ Direct DOM scroll executed');
-        } else {
-          console.error('❌ Contact element not found via DOM');
-        }
-      }
-    };
-
-    // Add event listener to document
-    document.addEventListener('click', handleDirectClick, true); // Use capture phase
-    
-    return () => {
-      document.removeEventListener('click', handleDirectClick, true);
-    };
-  }, []);
   return (
     <section id="pricing" className="relative py-12 md:py-16 lg:py-20 px-4 bg-black overflow-hidden">
       {/* 3D Fireworks Background */}

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { PricingTier } from '../../types';
 import Button from '../shared/Button';
 import FeaturedBadge from './FeaturedBadge';
 import ParticleEffect from '../shared/ParticleEffect';
-// Direct scroll implementation - no import needed
 
 interface PricingCardProps {
   tier: PricingTier;
@@ -12,6 +12,7 @@ interface PricingCardProps {
 }
 
 const PricingCard: React.FC<PricingCardProps> = ({ tier, index }) => {
+  const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
   const [triggerParticles, setTriggerParticles] = useState(false);
 
@@ -117,21 +118,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ tier, index }) => {
             className="w-full relative z-50"
             style={{ pointerEvents: 'auto', position: 'relative', zIndex: 50 }}
             onClick={() => {
-              console.log('🔥 BUTTON CLICKED!', tier.name);
-              console.log('🎯 Attempting to scroll to contact...');
-              
-              // Direct scroll implementation
-              const contactElement = document.getElementById('contact');
-              if (contactElement) {
-                console.log('📍 Contact element found:', contactElement);
-                contactElement.scrollIntoView({ 
-                  behavior: 'smooth', 
-                  block: 'start' 
-                });
-                console.log('✅ Scroll executed successfully');
-              } else {
-                console.error('❌ Contact element not found!');
-              }
+              navigate('/contact-us');
             }}
           >
             {tier.ctaText}
