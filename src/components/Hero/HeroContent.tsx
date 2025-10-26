@@ -31,7 +31,7 @@ const HeroContent: React.FC = () => {
         <h2 className="text-xl md:text-3xl font-semibold text-white mb-3 drop-shadow-md">
           Willkommen bei Pyrotech Event
         </h2>
-        <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold font-heading bg-gradient-primary bg-clip-text text-transparent mb-4 leading-tight drop-shadow-lg">
+        <h3 className="text-xl md:text-3xl lg:text-4xl font-bold font-heading bg-gradient-primary bg-clip-text text-transparent mb-4 leading-tight drop-shadow-lg">
           DIE FEUERWERK-EXPERTEN FÜR<br />
           UNVERGESSLICHE MOMENTE
         </h3>
