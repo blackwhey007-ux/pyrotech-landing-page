@@ -50,6 +50,7 @@ const Footer: React.FC = () => {
           {footerSections.map((section, sectionIndex) => (
             <motion.div
               key={section.title}
+              className={('isHorizontal' in section && section.isHorizontal) ? 'col-span-2 lg:col-span-1' : ''}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: sectionIndex * 0.1 }}
