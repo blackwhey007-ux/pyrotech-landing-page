@@ -263,7 +263,7 @@ export const CONTACT_INFO = {
   email: 'pyrotechevent@gmx.de',
   emailHours: 'Antwort innerhalb 24h',
   address: {
-    company: 'Pyrotech GmbH',
+    company: 'Pyrotech Event',
     street: '40472 Rath',
     city: ''
   }
