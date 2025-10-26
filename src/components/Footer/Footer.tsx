@@ -18,8 +18,7 @@ const Footer: React.FC = () => {
       links: [
         { name: 'Über Uns', href: '/about-us', isInternal: true },
         { name: 'Kontakt', href: '/contact-us', isInternal: true },
-        { name: 'Bewertungen', href: '/reviews', isInternal: true },
-        { name: 'Social Media', href: '/social-feeds', isInternal: true }
+        { name: 'Bewertungen', href: '/reviews', isInternal: true }
       ]
     },
     {
@@ -46,7 +45,7 @@ const Footer: React.FC = () => {
     <footer className="bg-black border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 py-6 md:py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-6 md:mb-12">
+        <div className="grid grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-12 max-w-2xl mx-auto lg:max-w-none lg:grid-cols-3">
           {footerSections.map((section, sectionIndex) => (
             <motion.div
               key={section.title}
