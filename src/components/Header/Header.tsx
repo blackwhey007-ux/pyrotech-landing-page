@@ -41,8 +41,16 @@ const Header: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-gray-300 hover:text-yellow-400 transition-colors p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+
+          {/* Logo - Centered on Mobile */}
+          <Link to="/" className="flex items-center space-x-2 md:space-x-3 group absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none">
             <div className="relative">
               <motion.img
                 src="/images/logo/Pyrotech-logo.jpg"
@@ -52,11 +60,9 @@ const Header: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
               />
             </div>
-            <img
-              src="/images/logo/pyrotech-event-logo.svg"
-              alt="Pyrotech Event"
-              className="h-8 md:h-10 w-auto group-hover:opacity-80 transition-all duration-300"
-            />
+            <span className="text-lg md:text-2xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent text-center">
+              Pyrotech Event
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -84,15 +90,6 @@ const Header: React.FC = () => {
               </Link>
             ))}
           </nav>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-300 hover:text-yellow-400 transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
         </div>
       </div>
 
