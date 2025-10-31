@@ -209,7 +209,19 @@
     "submit": "Request Consultation 🚀",
     "whatsapp": "WhatsApp Message 📱",
     "success": "Thank you! We will contact you shortly.",
-    "error": "An error occurred. Please try again."
+    "error": "An error occurred. Please try again.",
+    "loading": "Sending...",
+    "placeholderName": "Your full name",
+    "placeholderEmail": "your@email.com",
+    "placeholderMessage": "Tell us more about your event...",
+    "selectEvent": "Please select...",
+    "eventTypes": {
+      "Hochzeit": "Wedding",
+      "Firmenevent": "Corporate Event",
+      "Festival": "Festival",
+      "Geburtstag": "Birthday",
+      "Sonstiges": "Other"
+    }
   },
   "footer": {
     "tagline": "The Fireworks Experts",

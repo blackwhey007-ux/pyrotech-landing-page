@@ -209,7 +209,19 @@
     "submit": "Demander une Consultation 🚀",
     "whatsapp": "Message WhatsApp 📱",
     "success": "Merci ! Nous vous contacterons dans les plus brefs délais.",
-    "error": "Une erreur s'est produite. Veuillez réessayer."
+    "error": "Une erreur s'est produite. Veuillez réessayer.",
+    "loading": "Envoi en cours...",
+    "placeholderName": "Votre nom complet",
+    "placeholderEmail": "votre@email.fr",
+    "placeholderMessage": "Parlez-nous de votre événement...",
+    "selectEvent": "Veuillez choisir...",
+    "eventTypes": {
+      "Hochzeit": "Mariage",
+      "Firmenevent": "Événement d'Entreprise",
+      "Festival": "Festival",
+      "Geburtstag": "Anniversaire",
+      "Sonstiges": "Autre"
+    }
   },
   "footer": {
     "tagline": "Les Experts en Feux d'Artifice",

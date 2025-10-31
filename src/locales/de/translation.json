@@ -209,7 +209,19 @@
     "submit": "Beratung Anfragen 🚀",
     "whatsapp": "WhatsApp Nachricht 📱",
     "success": "Vielen Dank! Wir melden uns in Kürze bei Ihnen.",
-    "error": "Es gab einen Fehler. Bitte versuchen Sie es erneut."
+    "error": "Es gab einen Fehler. Bitte versuchen Sie es erneut.",
+    "loading": "Wird gesendet...",
+    "placeholderName": "Ihr vollständiger Name",
+    "placeholderEmail": "ihre@email.de",
+    "placeholderMessage": "Erzählen Sie uns mehr über Ihr Event...",
+    "selectEvent": "Bitte wählen...",
+    "eventTypes": {
+      "Hochzeit": "Hochzeit",
+      "Firmenevent": "Firmenevent",
+      "Festival": "Festival",
+      "Geburtstag": "Geburtstag",
+      "Sonstiges": "Sonstiges"
+    }
   },
   "footer": {
     "tagline": "Die Feuerwerk-Experten",

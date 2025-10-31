@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useTranslation } from 'react-i18next';
 import { contactFormSchema, ContactFormData } from '../../utils/validation';
 import { EVENT_TYPES } from '../../utils/constants';
 import Button from '../shared/Button';
 
 const ContactForm: React.FC = () => {
+  const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -91,21 +93,21 @@ Ich freue mich auf Ihre Rückmeldung!`;
       viewport={{ once: true }}
     >
       <h3 className="text-2xl font-bold text-white mb-6">
-        Beratung Anfragen
+        {t('contact.title')}
       </h3>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         {/* Name Field */}
         <div>
           <label htmlFor="name" className="block text-white font-medium mb-2">
-            Name *
+            {t('contact.name')}
           </label>
           <input
             {...register('name')}
             type="text"
             id="name"
             className="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-text-secondary focus:border-primary-yellow focus:outline-none transition-colors duration-300"
-            placeholder="Ihr vollständiger Name"
+            placeholder={t('contact.placeholderName')}
           />
           {errors.name && (
             <p className="mt-1 text-sm text-primary-red">{errors.name.message}</p>
@@ -115,7 +117,7 @@ Ich freue mich auf Ihre Rückmeldung!`;
         {/* Phone Field */}
         <div>
           <label htmlFor="phone" className="block text-white font-medium mb-2">
-            Telefon *
+            {t('contact.phone')}
           </label>
           <input
             {...register('phone')}
@@ -132,14 +134,14 @@ Ich freue mich auf Ihre Rückmeldung!`;
         {/* Email Field */}
         <div>
           <label htmlFor="email" className="block text-white font-medium mb-2">
-            E-Mail *
+            {t('contact.email')}
           </label>
           <input
             {...register('email')}
             type="email"
             id="email"
             className="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-text-secondary focus:border-primary-yellow focus:outline-none transition-colors duration-300"
-            placeholder="ihre@email.de"
+            placeholder={t('contact.placeholderEmail')}
           />
           {errors.email && (
             <p className="mt-1 text-sm text-primary-red">{errors.email.message}</p>
@@ -149,17 +151,17 @@ Ich freue mich auf Ihre Rückmeldung!`;
         {/* Event Type Field */}
         <div>
           <label htmlFor="eventType" className="block text-white font-medium mb-2">
-            Eventtyp *
+            {t('contact.eventType')}
           </label>
           <select
             {...register('eventType')}
             id="eventType"
             className="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white focus:border-primary-yellow focus:outline-none transition-colors duration-300"
           >
-            <option value="">Bitte wählen...</option>
+            <option value="">{t('contact.selectEvent')}</option>
             {EVENT_TYPES.map((type) => (
               <option key={type} value={type} className="bg-black">
-                {type}
+                {t(`contact.eventTypes.${type}`)}
               </option>
             ))}
           </select>
@@ -171,7 +173,7 @@ Ich freue mich auf Ihre Rückmeldung!`;
         {/* Preferred Date Field */}
         <div>
           <label htmlFor="preferredDate" className="block text-white font-medium mb-2">
-            Wunschdatum
+            {t('contact.date')}
           </label>
           <input
             {...register('preferredDate')}
@@ -184,14 +186,14 @@ Ich freue mich auf Ihre Rückmeldung!`;
         {/* Message Field */}
         <div>
           <label htmlFor="message" className="block text-white font-medium mb-2">
-            Nachricht
+            {t('contact.message')}
           </label>
           <textarea
             {...register('message')}
             id="message"
             rows={4}
             className="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white placeholder-text-secondary focus:border-primary-yellow focus:outline-none transition-colors duration-300 resize-none"
-            placeholder="Erzählen Sie uns mehr über Ihr Event..."
+            placeholder={t('contact.placeholderMessage')}
           />
           {errors.message && (
             <p className="mt-1 text-sm text-primary-red">{errors.message.message}</p>
@@ -207,11 +209,7 @@ Ich freue mich auf Ihre Rückmeldung!`;
             className="mt-1 w-4 h-4 text-primary-yellow bg-black/50 border-white/20 rounded focus:ring-primary-yellow focus:ring-2"
           />
           <label htmlFor="privacyAccepted" className="text-text-secondary text-sm leading-relaxed">
-            Ich akzeptiere die{' '}
-            <a href="#" className="text-primary-yellow hover:underline">
-              Datenschutzbedingungen
-            </a>{' '}
-            und stimme der Verarbeitung meiner Daten zu. *
+            {t('contact.privacy')}
           </label>
         </div>
         {errors.privacyAccepted && (
@@ -226,7 +224,7 @@ Ich freue mich auf Ihre Rückmeldung!`;
           loading={isSubmitting}
           className="w-full"
         >
-          {isSubmitting ? 'Wird gesendet...' : 'Beratung Anfragen 🚀'}
+          {isSubmitting ? t('contact.loading') : t('contact.submit')}
         </Button>
 
         {/* WhatsApp Button */}
@@ -237,7 +235,7 @@ Ich freue mich auf Ihre Rückmeldung!`;
           onClick={handleWhatsAppClick}
           className="w-full bg-green-600 hover:bg-green-700 border-green-600 hover:border-green-700"
         >
-          WhatsApp Nachricht 📱
+          {t('contact.whatsapp')}
         </Button>
 
         {/* Status Messages */}
@@ -247,7 +245,7 @@ Ich freue mich auf Ihre Rückmeldung!`;
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Vielen Dank! Wir melden uns schnellstmöglich bei Ihnen.
+            {t('contact.success')}
           </motion.div>
         )}
 
@@ -257,7 +255,7 @@ Ich freue mich auf Ihre Rückmeldung!`;
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Es gab einen Fehler beim Senden. Bitte versuchen Sie es erneut.
+            {t('contact.error')}
           </motion.div>
         )}
       </form>
