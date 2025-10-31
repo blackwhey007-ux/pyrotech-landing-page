@@ -151,7 +151,7 @@ export const PRICING_EXTRAS: PricingExtra[] = [
     id: 'lichterbild',
     name: 'Lichterbild',
     price: '59€',
-    description: 'Spezielle Lichteffekte',
+    description: 'Leuchtende Buchstaben und Zahlen',
     icon: '💡'
   },
   {
