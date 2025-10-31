@@ -171,8 +171,8 @@ export const PRICING_EXTRAS: PricingExtra[] = [
   {
     id: 'hochzeitstanzeffekte',
     name: 'Hochzeitstanz-Effekte',
-    price: '399€',
-    description: 'Beeindruckende Effekte für Ihren Tanz',
+    price: '549€',
+    description: 'Bodennebel + 4xFontänen',
     icon: '💃'
   },
   {
