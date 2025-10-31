@@ -148,8 +148,8 @@ export const PRICING_EXTRAS: PricingExtra[] = [
     icon: '🎵'
   },
   {
-    id: 'lichterbilder',
-    name: 'Lichterbilder',
+    id: 'lichterbild',
+    name: 'Lichterbild',
     price: '59€',
     description: 'Spezielle Lichteffekte',
     icon: '💡'
@@ -167,6 +167,34 @@ export const PRICING_EXTRAS: PricingExtra[] = [
     price: '189€',
     description: 'Spektakulärer Abschluss',
     icon: '🎆'
+  },
+  {
+    id: 'hochzeitstanzeffekte',
+    name: 'Hochzeitstanz-Effekte',
+    price: '99€',
+    description: 'Beeindruckende Effekte für Ihren Tanz',
+    icon: '💃'
+  },
+  {
+    id: 'nebelmaschine',
+    name: 'Nebelmaschine',
+    price: '79€',
+    description: 'Dramatische Nebeleffekte',
+    icon: '🌫️'
+  },
+  {
+    id: 'sparkular',
+    name: 'Sparkular (Fontänen)',
+    price: '89€',
+    description: 'Majestätische Fontänen-Effekte',
+    icon: '✨'
+  },
+  {
+    id: 'flame',
+    name: 'Flame',
+    price: '119€',
+    description: 'Spektakuläre Flammeneffekte',
+    icon: '🔥'
   }
 ];
 
