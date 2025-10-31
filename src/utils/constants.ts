@@ -281,7 +281,7 @@ export const ANNOUNCEMENTS: Announcement[] = [
 
 export const STORY_CONTENT = {
   founder: {
-    name: 'Marcus Weber',
+    name: 'Sami Marwani',
     title: 'Gründer & Chef-Pyrotechniker',
     image: '/images/founder-marcus.jpg',
     quote: '"Ich war 8 Jahre alt, als ich das erste Mal Feuerwerk sah. In diesem Moment wusste ich: Das ist Magie, und ich will diese Magie zu den Menschen bringen."'
