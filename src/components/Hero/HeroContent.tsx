@@ -52,7 +52,13 @@ const HeroContent: React.FC = () => {
           variant="primary"
           size="lg"
           className="min-w-[200px] shadow-lg"
-          onClick={() => navigate('/contact-us')}
+          onClick={() => {
+            if (location.pathname === '/') {
+              window.location.hash = '#contact';
+            } else {
+              navigate('/#contact');
+            }
+          }}
         >
           Jetzt Beratung buchen
         </Button>
@@ -61,29 +67,10 @@ const HeroContent: React.FC = () => {
           size="lg"
           className="min-w-[200px] shadow-lg"
           onClick={() => {
-            // On home page, scroll to pricing after a small delay
             if (location.pathname === '/') {
-              setTimeout(() => {
-                const pricingElement = document.getElementById('pricing');
-                if (pricingElement) {
-                  window.scrollTo({
-                    top: pricingElement.offsetTop - 80,
-                    behavior: 'smooth'
-                  });
-                }
-              }, 50);
+              window.location.hash = '#pricing';
             } else {
-              // On other pages, navigate to home then scroll
-              navigate('/');
-              setTimeout(() => {
-                const pricingElement = document.getElementById('pricing');
-                if (pricingElement) {
-                  window.scrollTo({
-                    top: pricingElement.offsetTop - 80,
-                    behavior: 'smooth'
-                  });
-                }
-              }, 100);
+              navigate('/#pricing');
             }
           }}
         >

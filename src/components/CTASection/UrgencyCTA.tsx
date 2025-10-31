@@ -99,7 +99,13 @@ const UrgencyCTA: React.FC = () => {
             variant="primary"
             size="lg"
             className="text-xl px-12 py-4"
-            onClick={() => navigate('/contact-us')}
+            onClick={() => {
+              if (location.pathname === '/') {
+                window.location.hash = '#contact';
+              } else {
+                navigate('/#contact');
+              }
+            }}
           >
             Verfügbarkeit Prüfen 🔥
           </Button>

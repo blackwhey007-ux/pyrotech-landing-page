@@ -118,7 +118,11 @@ const PricingCard: React.FC<PricingCardProps> = ({ tier, index }) => {
             className="w-full relative z-50"
             style={{ pointerEvents: 'auto', position: 'relative', zIndex: 50 }}
             onClick={() => {
-              navigate('/contact-us');
+              if (location.pathname === '/') {
+                window.location.hash = '#contact';
+              } else {
+                navigate('/#contact');
+              }
             }}
           >
             {tier.ctaText}
