@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { PRICING_TIERS, PRICING_EXTRAS } from '../../utils/constants';
 import PricingCard from './PricingCard';
 import SectionTitle from '../shared/SectionTitle';
@@ -6,6 +7,8 @@ import PricingFireworks3D from './PricingFireworks3D';
 
 const PricingSection: React.FC = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+  
   return (
     <section id="pricing" className="relative py-12 md:py-16 lg:py-20 px-4 bg-black overflow-hidden">
       {/* 3D Fireworks Background */}
@@ -17,8 +20,8 @@ const PricingSection: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto">
         <SectionTitle
-          title="Unsere Feuerwerk-Pakete"
-          subtitle="Transparent, fair und spektakulär"
+          title={t('pricing.title')}
+          subtitle={t('pricing.subtitle')}
         />
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto pt-8">
@@ -35,10 +38,10 @@ const PricingSection: React.FC = () => {
         <div className="mt-12 md:mt-16">
           <div className="text-center mb-8 md:mb-12">
             <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4">
-              Zusätzliche Extras
+              {t('pricing.extras.title')}
             </h3>
             <p className="text-text-secondary text-base md:text-lg">
-              Verstärken Sie Ihr Feuerwerk mit unseren Spezialeffekten
+              {t('pricing.extras.subtitle')}
             </p>
           </div>
           
