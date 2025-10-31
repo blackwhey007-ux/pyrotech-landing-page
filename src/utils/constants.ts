@@ -171,14 +171,14 @@ export const PRICING_EXTRAS: PricingExtra[] = [
   {
     id: 'hochzeitstanzeffekte',
     name: 'Hochzeitstanz-Effekte',
-    price: '99€',
+    price: '399€',
     description: 'Beeindruckende Effekte für Ihren Tanz',
     icon: '💃'
   },
   {
     id: 'nebelmaschine',
     name: 'Nebelmaschine',
-    price: '79€',
+    price: '199€',
     description: 'Dramatische Nebeleffekte',
     icon: '🌫️'
   },
