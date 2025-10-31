@@ -1,0 +1,254 @@
+{
+  "nav": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "about": "About Us",
+    "contact": "Contact",
+    "reviews": "Reviews",
+    "social": "Social Media",
+    "impressum": "Legal Notice"
+  },
+  "hero": {
+    "title": "Spectacular Fireworks Displays",
+    "subtitle": "Professional pyrotechnics for unforgettable moments",
+    "ctaBook": "Book Consultation",
+    "ctaView": "View Packages"
+  },
+  "events": {
+    "title": "Choose Your Event",
+    "subtitle": "We create the perfect fireworks for every occasion",
+    "hochzeiten": {
+      "title": "Weddings",
+      "description": "Romantic fireworks displays for your special day"
+    },
+    "geburtstage": {
+      "title": "Birthdays",
+      "description": "Special moments with personalized effects"
+    },
+    "silvester": {
+      "title": "New Year's Eve",
+      "description": "Countdown fireworks for the year transition"
+    },
+    "gender-reveal": {
+      "title": "Gender Reveal",
+      "description": "Magical gender unveiling"
+    },
+    "hochzeitstanz": {
+      "title": "First Dance",
+      "description": "Spectacular effects for your first dance"
+    },
+    "firmenevent": {
+      "title": "Corporate Events",
+      "description": "Professional pyrotechnics for corporate events"
+    },
+    "festival": {
+      "title": "Festivals",
+      "description": "Spectacular grand fireworks for events"
+    },
+    "schuetzenfest": {
+      "title": "Traditional Festivals",
+      "description": "Traditional fireworks for folk festivals"
+    }
+  },
+  "pricing": {
+    "title": "Our Packages",
+    "subtitle": "Transparent and fair - with no hidden costs",
+    "einsteiger": {
+      "name": "STARTER PACKAGE",
+      "price": "699€",
+      "description": "Perfect for getting started",
+      "features": {
+        "duration": "Duration: approx. 4-5 minutes",
+        "positions": "Launch positions: 1",
+        "pyrotechnician": "Pyrotechnician included",
+        "service": "Service package included",
+        "safety": "Safety check",
+        "permit": "Permit support"
+      },
+      "cta": "Choose Package"
+    },
+    "standard": {
+      "name": "STANDARD PACKAGE",
+      "price": "1.199€",
+      "description": "Best seller",
+      "features": {
+        "duration": "Duration: approx. 5-6 minutes",
+        "positions": "Launch positions: 2",
+        "pyrotechnician": "Pyrotechnician included",
+        "service": "Service package included",
+        "effects": "Advanced effects",
+        "permit": "Full permits"
+      },
+      "cta": "Book Now ⚡"
+    },
+    "premium": {
+      "name": "PREMIUM PACKAGE",
+      "price": "1.799€",
+      "description": "For special occasions",
+      "features": {
+        "duration": "Duration: approx. 6-7 minutes",
+        "positions": "Launch positions: 3",
+        "pyrotechnician": "Pyrotechnician included",
+        "service": "Service package included",
+        "effects": "Premium effects",
+        "consultation": "Personal consultation"
+      },
+      "cta": "Choose Package"
+    },
+    "grand": {
+      "name": "GRAND FIREWORKS",
+      "price": "from 2.799€",
+      "description": "The ultimate spectacle",
+      "features": {
+        "duration": "Duration: from 7 minutes",
+        "positions": "Launch positions: Multiple (min. 4)",
+        "pyrotechnician": "Pyrotechnician included",
+        "service": "Service package included",
+        "effects": "Special effects",
+        "choreography": "Custom choreography"
+      },
+      "cta": "Request Quote"
+    },
+    "extras": {
+      "title": "Additional Extras",
+      "subtitle": "Personalize your show",
+      "items": {
+        "music": {
+          "name": "Music Synchronization",
+          "price": "149€",
+          "description": "Fireworks perfectly synchronized with music"
+        },
+        "lichtshow": {
+          "name": "Light Show",
+          "price": "299€",
+          "description": "Spectacular lighting effects"
+        },
+        "lichtbild": {
+          "name": "Light Display",
+          "price": "59€",
+          "description": "Glowing letters and numbers"
+        },
+        "feuerschalen": {
+          "name": "Fire Bowls",
+          "price": "49€",
+          "description": "Romantic fire bowls"
+        },
+        "finale": {
+          "name": "Grand Finale",
+          "price": "189€",
+          "description": "Spectacular finale"
+        },
+        "hochzeitstanz": {
+          "name": "First Dance Effects",
+          "price": "549€",
+          "description": "Ground fog + 4 fountains"
+        },
+        "nebelmaschine": {
+          "name": "Fog Machine",
+          "price": "199€",
+          "description": "Dramatic fog effects"
+        },
+        "sparkular": {
+          "name": "Sparkular (Fountains)",
+          "price": "89€",
+          "description": "Majestic fountain effects"
+        },
+        "flame": {
+          "name": "Flame",
+          "price": "119€",
+          "description": "Spectacular flame effects"
+        }
+      }
+    }
+  },
+  "process": {
+    "title": "How It Works",
+    "subtitle": "From idea to show - in 4 simple steps",
+    "steps": {
+      "consultation": {
+        "title": "CONSULTATION",
+        "description": "Free initial consultation by phone"
+      },
+      "planning": {
+        "title": "PLANNING",
+        "description": "Concept & Custom design"
+      },
+      "approval": {
+        "title": "APPROVALS",
+        "description": "All permits handled by us"
+      },
+      "show": {
+        "title": "SHOW",
+        "description": "Spectacular execution on event day"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Real experiences from real people"
+  },
+  "cta": {
+    "title": "Ready for Your Show?",
+    "subtitle": "Don't waste a moment - slots are limited!",
+    "button": "Check Availability 🔥"
+  },
+  "trust": {
+    "insured": "Fully Insured",
+    "expertise": "Professional Expertise",
+    "nationwide": "Nationwide"
+  },
+  "contact": {
+    "title": "Request Consultation",
+    "name": "Name *",
+    "phone": "Phone *",
+    "email": "Email *",
+    "eventType": "Event Type *",
+    "date": "Preferred Date",
+    "message": "Message",
+    "privacy": "I accept the privacy policy *",
+    "submit": "Request Consultation 🚀",
+    "whatsapp": "WhatsApp Message 📱",
+    "success": "Thank you! We will contact you shortly.",
+    "error": "An error occurred. Please try again."
+  },
+  "footer": {
+    "tagline": "The Fireworks Experts",
+    "address": "Arcadiastr.24, 40472 Düsseldorf",
+    "copyright": "© 2025 Pyrotech Event",
+    "followUs": "Follow Us",
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp"
+  },
+  "about": {
+    "title": "About Pyrotech Event",
+    "tagline": "Spectacular pyrotechnics at the highest level",
+    "description": "Pyrotech Event represents spectacular pyrotechnics at the highest level. We design and execute impressive fireworks displays for all types of events, from local festivals and weddings to major events.",
+    "principles": {
+      "title1": "Safety, Precision and Creativity",
+      "description1": "Safety, precision and creativity are our top priorities. Our experienced pyrotechnicians combine technical expertise with artistic sensibility to create unforgettable moments in the sky.",
+      "title2": "State-of-the-Art Technology",
+      "description2": "With cutting-edge technology and certified materials, we guarantee safe and professional execution for shows that amaze and create lasting memories."
+    },
+    "values": {
+      "title": "Our Values",
+      "sicherheit": {
+        "title": "Safety",
+        "description": "Safety is our top priority - in planning, setup and execution of every show. We work exclusively with certified materials and in compliance with current regulations."
+      },
+      "kreativitaet": {
+        "title": "Creativity",
+        "description": "Every fireworks is unique. We combine light, color and music to create emotional moments that last."
+      },
+      "professionalitaet": {
+        "title": "Professionalism",
+        "description": "From the first idea to the last spark - we work with precision, reliability and the highest quality standards."
+      },
+      "zuverlaessigkeit": {
+        "title": "Reliability",
+        "description": "We keep our promises - punctuality, transparency and full responsibility for our craft."
+      }
+    }
+  }
+}
+

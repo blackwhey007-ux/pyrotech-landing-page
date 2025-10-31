@@ -1,0 +1,254 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "pricing": "Tarifs",
+    "about": "À Propos",
+    "contact": "Contact",
+    "reviews": "Avis",
+    "social": "Réseaux Sociaux",
+    "impressum": "Mentions Légales"
+  },
+  "hero": {
+    "title": "Spectacles Pyrotechniques Spectaculaires",
+    "subtitle": "Pyrotechnie professionnelle pour des moments inoubliables",
+    "ctaBook": "Réserver une Consultation",
+    "ctaView": "Voir nos Formules"
+  },
+  "events": {
+    "title": "Choisissez Votre Événement",
+    "subtitle": "Nous créons le feu d'artifice parfait pour chaque occasion",
+    "hochzeiten": {
+      "title": "Mariages",
+      "description": "Spectacles pyrotechniques romantiques pour le plus beau des jours"
+    },
+    "geburtstage": {
+      "title": "Anniversaires",
+      "description": "Moments spéciaux avec des effets personnalisés"
+    },
+    "silvester": {
+      "title": "Nouvel An",
+      "description": "Feu d'artifice de compte à rebours pour le passage à la nouvelle année"
+    },
+    "gender-reveal": {
+      "title": "Réception Genre",
+      "description": "Révélation magique du sexe du bébé"
+    },
+    "hochzeitstanz": {
+      "title": "Premier Bal",
+      "description": "Effets spectaculaires pour la première danse"
+    },
+    "firmenevent": {
+      "title": "Événements d'Entreprise",
+      "description": "Pyrotechnie professionnelle pour événements corporate"
+    },
+    "festival": {
+      "title": "Festivals",
+      "description": "Grands spectacles pyrotechniques pour événements"
+    },
+    "schuetzenfest": {
+      "title": "Fêtes Traditionnelles",
+      "description": "Feux d'artifice traditionnels pour fêtes populaires"
+    }
+  },
+  "pricing": {
+    "title": "Nos Formules",
+    "subtitle": "Transparent et équitable - sans frais cachés",
+    "einsteiger": {
+      "name": "FORMULE DÉCOUVERTE",
+      "price": "699€",
+      "description": "Parfait pour débuter",
+      "features": {
+        "duration": "Durée : env. 4-5 minutes",
+        "positions": "Positions de tir : 1",
+        "pyrotechnician": "Pyrotechnicien inclus",
+        "service": "Forfait service inclus",
+        "safety": "Vérification de sécurité",
+        "permit": "Aide aux autorisations"
+      },
+      "cta": "Choisir cette formule"
+    },
+    "standard": {
+      "name": "FORMULE STANDARD",
+      "price": "1.199€",
+      "description": "Best-seller",
+      "features": {
+        "duration": "Durée : env. 5-6 minutes",
+        "positions": "Positions de tir : 2",
+        "pyrotechnician": "Pyrotechnicien inclus",
+        "service": "Forfait service inclus",
+        "effects": "Effets avancés",
+        "permit": "Autorisations complètes"
+      },
+      "cta": "Réserver ⚡"
+    },
+    "premium": {
+      "name": "FORMULE PREMIUM",
+      "price": "1.799€",
+      "description": "Pour occasions spéciales",
+      "features": {
+        "duration": "Durée : env. 6-7 minutes",
+        "positions": "Positions de tir : 3",
+        "pyrotechnician": "Pyrotechnicien inclus",
+        "service": "Forfait service inclus",
+        "effects": "Effets premium",
+        "consultation": "Conseils personnalisés"
+      },
+      "cta": "Choisir cette formule"
+    },
+    "grand": {
+      "name": "GRAND SPECTACLE",
+      "price": "à partir de 2.799€",
+      "description": "Le spectacle ultime",
+      "features": {
+        "duration": "Durée : à partir de 7 minutes",
+        "positions": "Positions de tir : Plusieurs (min. 4)",
+        "pyrotechnician": "Pyrotechnicien inclus",
+        "service": "Forfait service inclus",
+        "effects": "Effets spéciaux",
+        "choreography": "Chorégraphie sur mesure"
+      },
+      "cta": "Demander un devis"
+    },
+    "extras": {
+      "title": "Options Supplémentaires",
+      "subtitle": "Personnalisation de votre spectacle",
+      "items": {
+        "music": {
+          "name": "Synchronisation Musicale",
+          "price": "149€",
+          "description": "Feu d'artifice parfaitement synchronisé avec la musique"
+        },
+        "lichtshow": {
+          "name": "Show Lumineux",
+          "price": "299€",
+          "description": "Effets lumineux spectaculaires"
+        },
+        "lichtbild": {
+          "name": "Lettres Lumineuses",
+          "price": "59€",
+          "description": "Lettres et chiffres illuminés"
+        },
+        "feuerschalen": {
+          "name": "Braseros",
+          "price": "49€",
+          "description": "Braseros romantiques"
+        },
+        "finale": {
+          "name": "Grand Final",
+          "price": "189€",
+          "description": "Finale spectaculaire"
+        },
+        "hochzeitstanz": {
+          "name": "Effets Premier Bal",
+          "price": "549€",
+          "description": "Brouillard au sol + 4 fontaines"
+        },
+        "nebelmaschine": {
+          "name": "Machine à Brouillard",
+          "price": "199€",
+          "description": "Effets de brouillard dramatiques"
+        },
+        "sparkular": {
+          "name": "Sparkular (Fontaines)",
+          "price": "89€",
+          "description": "Effets de fontaines majestueux"
+        },
+        "flame": {
+          "name": "Flamme",
+          "price": "119€",
+          "description": "Effets de flammes spectaculaires"
+        }
+      }
+    }
+  },
+  "process": {
+    "title": "Comment Ça Marche",
+    "subtitle": "De l'idée au spectacle - en 4 étapes simples",
+    "steps": {
+      "consultation": {
+        "title": "CONSULTATION",
+        "description": "Première consultation gratuite par téléphone"
+      },
+      "planning": {
+        "title": "PLANIFICATION",
+        "description": "Concept & Design personnalisé"
+      },
+      "approval": {
+        "title": "AUTORISATIONS",
+        "description": "Toutes les autorisations gérées par nous"
+      },
+      "show": {
+        "title": "SPECTACLE",
+        "description": "Mise en œuvre spectaculaire le jour J"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "subtitle": "Expériences réelles de personnes réelles"
+  },
+  "cta": {
+    "title": "Prêt pour Votre Spectacle ?",
+    "subtitle": "Ne perdez pas de temps - les créneaux sont limités !",
+    "button": "Vérifier la Disponibilité 🔥"
+  },
+  "trust": {
+    "insured": "Entièrement Assuré",
+    "expertise": "Expertise Professionnelle",
+    "nationwide": "National"
+  },
+  "contact": {
+    "title": "Demander une Consultation",
+    "name": "Nom *",
+    "phone": "Téléphone *",
+    "email": "E-mail *",
+    "eventType": "Type d'événement *",
+    "date": "Date souhaitée",
+    "message": "Message",
+    "privacy": "J'accepte les conditions de confidentialité *",
+    "submit": "Demander une Consultation 🚀",
+    "whatsapp": "Message WhatsApp 📱",
+    "success": "Merci ! Nous vous contacterons dans les plus brefs délais.",
+    "error": "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "footer": {
+    "tagline": "Les Experts en Feux d'Artifice",
+    "address": "Arcadiastr.24, 40472 Düsseldorf",
+    "copyright": "© 2025 Pyrotech Event",
+    "followUs": "Suivez-Nous",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "whatsapp": "WhatsApp"
+  },
+  "about": {
+    "title": "À Propos de Pyrotech Event",
+    "tagline": "Pyrotechnie spectaculaire au plus haut niveau",
+    "description": "Pyrotech Event représente la pyrotechnie spectaculaire au plus haut niveau. Nous concevons et réalisons des spectacles pyrotechniques impressionnants pour tout type d'événement, des festivals locaux et mariages aux grands événements.",
+    "principles": {
+      "title1": "Sécurité, Précision et Créativité",
+      "description1": "La sécurité, la précision et la créativité sont nos priorités absolues. Nos pyrotechniciens expérimentés associent savoir-faire technique et sens artistique pour créer des moments inoubliables dans le ciel.",
+      "title2": "Technologie de Pointe",
+      "description2": "Avec une technologie de pointe et des matériaux certifiés, nous garantissons une exécution sûre et professionnelle pour des spectacles qui émerveillent et marquent les mémoires."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "sicherheit": {
+        "title": "Sécurité",
+        "description": "La sécurité est notre priorité absolue - dans la planification, l'installation et l'exécution de chaque spectacle. Nous travaillons exclusivement avec des matériaux certifiés et conformes aux réglementations en vigueur."
+      },
+      "kreativitaet": {
+        "title": "Créativité",
+        "description": "Chaque feu d'artifice est unique. Nous combinons lumière, couleur et musique pour créer des moments émotionnels qui marquent."
+      },
+      "professionalitaet": {
+        "title": "Professionnalisme",
+        "description": "De la première idée jusqu'à la dernière étincelle - nous travaillons avec précision, fiabilité et les plus hauts standards de qualité."
+      },
+      "zuverlaessigkeit": {
+        "title": "Fiabilité",
+        "description": "Nous tenons nos promesses - ponctualité, transparence et responsabilité totale dans notre savoir-faire."
+      }
+    }
+  }
+}
+

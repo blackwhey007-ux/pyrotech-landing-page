@@ -1,0 +1,254 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "pricing": "Preise",
+    "about": "Über Uns",
+    "contact": "Kontakt",
+    "reviews": "Bewertungen",
+    "social": "Social Media",
+    "impressum": "Impressum"
+  },
+  "hero": {
+    "title": "Spektakuläre Feuerwerkshows",
+    "subtitle": "Professionelle Pyrotechnik für unvergessliche Momente",
+    "ctaBook": "Jetzt Beratung buchen",
+    "ctaView": "Pakete ansehen"
+  },
+  "events": {
+    "title": "Wähle Deinen Anlass",
+    "subtitle": "Wir kreieren das perfekte Feuerwerk für jede Veranstaltung",
+    "hochzeiten": {
+      "title": "Hochzeiten",
+      "description": "Romantische Feuerwerk-Shows für den schönsten Tag"
+    },
+    "geburtstage": {
+      "title": "Geburtstage",
+      "description": "Besondere Momente mit personalisierten Effekten"
+    },
+    "silvester": {
+      "title": "Silvester",
+      "description": "Countdown-Feuerwerk für den Jahreswechsel"
+    },
+    "gender-reveal": {
+      "title": "Gender Reveal",
+      "description": "Magische Enthüllung des Geschlechts"
+    },
+    "hochzeitstanz": {
+      "title": "Hochzeitstanz",
+      "description": "Spektakuläre Effekte für den ersten Tanz"
+    },
+    "firmenevent": {
+      "title": "Firmenevent",
+      "description": "Professionelle Pyrotechnik für Corporate Events"
+    },
+    "festival": {
+      "title": "Festival",
+      "description": "Spektakuläre Großfeuerwerke für Veranstaltungen"
+    },
+    "schuetzenfest": {
+      "title": "Schützenfest",
+      "description": "Traditionelle Feuerwerke für Volksfeste"
+    }
+  },
+  "pricing": {
+    "title": "Unsere Pakete",
+    "subtitle": "Transparent und fair - ohne versteckte Kosten",
+    "einsteiger": {
+      "name": "EINSTEIGERPAKET",
+      "price": "699€",
+      "description": "Perfekt für den Einstieg",
+      "features": {
+        "duration": "Dauer: ca. 4-5 Minuten",
+        "positions": "Abschusspositionen: 1",
+        "pyrotechnician": "Pyrotechniker inklusive",
+        "service": "Servicepaket inklusive",
+        "safety": "Sicherheitscheck",
+        "permit": "Genehmigungs-Support"
+      },
+      "cta": "Paket wählen"
+    },
+    "standard": {
+      "name": "STANDARDPAKET",
+      "price": "1.199€",
+      "description": "Bestseller",
+      "features": {
+        "duration": "Dauer: ca. 5-6 Minuten",
+        "positions": "Abschusspositionen: 2",
+        "pyrotechnician": "Pyrotechniker inklusive",
+        "service": "Servicepaket inklusive",
+        "effects": "Erweiterte Effekte",
+        "permit": "Volle Genehmigung"
+      },
+      "cta": "Jetzt buchen ⚡"
+    },
+    "premium": {
+      "name": "PREMIUMPAKET",
+      "price": "1.799€",
+      "description": "Für besondere Anlässe",
+      "features": {
+        "duration": "Dauer: ca. 6-7 Minuten",
+        "positions": "Abschusspositionen: 3",
+        "pyrotechnician": "Pyrotechniker inklusive",
+        "service": "Servicepaket inklusive",
+        "effects": "Premium Effekte",
+        "consultation": "Individuelle Beratung"
+      },
+      "cta": "Paket wählen"
+    },
+    "grand": {
+      "name": "GRAND FEUERWERK",
+      "price": "ab 2.799€",
+      "description": "Das ultimative Spektakel",
+      "features": {
+        "duration": "Dauer: ab 7 Minuten",
+        "positions": "Abschusspositionen: Mehrere (mind. 4)",
+        "pyrotechnician": "Pyrotechniker inklusive",
+        "service": "Servicepaket inklusive",
+        "effects": "Spezialeffekte",
+        "choreography": "Custom Choreografie"
+      },
+      "cta": "Beratung anfragen"
+    },
+    "extras": {
+      "title": "Zusätzliche Extras",
+      "subtitle": "Individuelle Verstärkung Deiner Show",
+      "items": {
+        "music": {
+          "name": "Musik-Synchronisation",
+          "price": "149€",
+          "description": "Feuerwerk perfekt zur Musik"
+        },
+        "lichtshow": {
+          "name": "Lichtshow",
+          "price": "299€",
+          "description": "Spektakuläre Lichteffekte"
+        },
+        "lichtbild": {
+          "name": "Lichterbild",
+          "price": "59€",
+          "description": "Leuchtende Buchstaben und Zahlen"
+        },
+        "feuerschalen": {
+          "name": "Feuerschalen",
+          "price": "49€",
+          "description": "Romantische Feuerschalen"
+        },
+        "finale": {
+          "name": "Grand Finale",
+          "price": "189€",
+          "description": "Spektakulärer Abschluss"
+        },
+        "hochzeitstanz": {
+          "name": "Hochzeitstanz-Effekte",
+          "price": "549€",
+          "description": "Bodennebel + 4xFontänen"
+        },
+        "nebelmaschine": {
+          "name": "Nebelmaschine",
+          "price": "199€",
+          "description": "Dramatische Nebeleffekte"
+        },
+        "sparkular": {
+          "name": "Sparkular (Fontänen)",
+          "price": "89€",
+          "description": "Majestätische Fontänen-Effekte"
+        },
+        "flame": {
+          "name": "Flame",
+          "price": "119€",
+          "description": "Spektakuläre Flammeneffekte"
+        }
+      }
+    }
+  },
+  "process": {
+    "title": "So funktioniert's",
+    "subtitle": "Von der Idee bis zur Show - in 4 einfachen Schritten",
+    "steps": {
+      "consultation": {
+        "title": "BERATUNG",
+        "description": "Kostenlose Erstberatung per Telefon"
+      },
+      "planning": {
+        "title": "PLANUNG",
+        "description": "Konzept & Individuelles Design"
+      },
+      "approval": {
+        "title": "GENEHMIGUNG",
+        "description": "Alle Genehmigungen werden von uns übernommen"
+      },
+      "show": {
+        "title": "SHOW",
+        "description": "Spektakuläre Durchführung am Event-Tag"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Was unsere Kunden sagen",
+    "subtitle": "Echte Erfahrungen von echten Menschen"
+  },
+  "cta": {
+    "title": "Bereit für Deine Show?",
+    "subtitle": "Verliere keinen Moment - Termine sind begrenzt!",
+    "button": "Verfügbarkeit Prüfen 🔥"
+  },
+  "trust": {
+    "insured": "Voll Versichert",
+    "expertise": "Professionelle Expertise",
+    "nationwide": "Bundesweit"
+  },
+  "contact": {
+    "title": "Beratung Anfragen",
+    "name": "Name *",
+    "phone": "Telefon *",
+    "email": "E-Mail *",
+    "eventType": "Eventtyp *",
+    "date": "Wunschdatum",
+    "message": "Nachricht",
+    "privacy": "Ich akzeptiere die Datenschutzbedingungen *",
+    "submit": "Beratung Anfragen 🚀",
+    "whatsapp": "WhatsApp Nachricht 📱",
+    "success": "Vielen Dank! Wir melden uns in Kürze bei Ihnen.",
+    "error": "Es gab einen Fehler. Bitte versuchen Sie es erneut."
+  },
+  "footer": {
+    "tagline": "Die Feuerwerk-Experten",
+    "address": "Arcadiastr.24, 40472 Düsseldorf",
+    "copyright": "© 2025 Pyrotech Event",
+    "followUs": "Folgen Sie Uns",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "whatsapp": "WhatsApp"
+  },
+  "about": {
+    "title": "Über Pyrotech Event",
+    "tagline": "Spektakuläre Pyrotechnik auf höchstem Niveau",
+    "description": "Pyrotech Event steht für spektakuläre Pyrotechnik auf höchstem Niveau. Wir planen und realisieren beeindruckende Feuerwerkshows für Veranstaltungen jeder Art, von Stadtfesten und Hochzeiten bis zu Großevents.",
+    "principles": {
+      "title1": "Sicherheit, Präzision und Kreativität",
+      "description1": "Sicherheit, Präzision und Kreativität stehen bei uns an erster Stelle. Unsere erfahrenen Pyrotechniker verbinden technisches Know-how mit künstlerischem Gespür, um unvergessliche Momente am Himmel zu schaffen.",
+      "title2": "Modernste Technik",
+      "description2": "Mit modernster Technik und geprüften Materialien garantieren wir eine sichere und professionelle Durchführung für Shows, die begeistern und in Erinnerung bleiben."
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "sicherheit": {
+        "title": "Sicherheit",
+        "description": "Sicherheit hat bei uns oberste Priorität – in der Planung, im Aufbau und in der Durchführung jeder Show. Wir arbeiten ausschließlich mit geprüften Materialien und nach den geltenden gesetzlichen Vorschriften."
+      },
+      "kreativitaet": {
+        "title": "Kreativität",
+        "description": "Jedes Feuerwerk ist ein Unikat. Wir kombinieren Licht, Farbe und Musik zu emotionalen Momenten, die in Erinnerung bleiben."
+      },
+      "professionalitaet": {
+        "title": "Professionalität",
+        "description": "Von der ersten Idee bis zum letzten Funken – wir arbeiten präzise, zuverlässig und mit höchstem Anspruch an Qualität."
+      },
+      "zuverlaessigkeit": {
+        "title": "Zuverlässigkeit",
+        "description": "Wir halten, was wir versprechen – pünktlich, transparent und mit voller Verantwortung für unser Handwerk."
+      }
+    }
+  }
+}
+

@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App.tsx'
 import './index.css'
 import { suppressConsoleWarnings } from './utils/consoleSuppression'
+import './i18n'
 
 // Suppress common development warnings
 suppressConsoleWarnings()

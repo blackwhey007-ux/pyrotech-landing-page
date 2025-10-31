@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import HeaderBackground3D from './HeaderBackground3D';
+import LanguageSelector from './LanguageSelector';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,11 +26,11 @@ const Header: React.FC = () => {
   }, [location.pathname]);
 
   const navItems = [
-    { path: '/', label: 'Startseite' },
-    { path: '/preise', label: 'Preise' },
-    { path: '/about-us', label: 'Über Uns' },
-    { path: '/contact-us', label: 'Kontakt' },
-    { path: '/social-feeds', label: 'Social Media' },
+    { path: '/', label: t('nav.home') },
+    { path: '/preise', label: t('nav.pricing') },
+    { path: '/about-us', label: t('nav.about') },
+    { path: '/contact-us', label: t('nav.contact') },
+    { path: '/social-feeds', label: t('nav.social') },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -91,13 +94,21 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* Mobile Menu Button - Right Side */}
-          <button
-            className="md:hidden text-gray-300 hover:text-yellow-400 transition-colors p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Language Selector - Desktop */}
+          <div className="hidden md:block">
+            <LanguageSelector />
+          </div>
+
+          {/* Mobile Menu Button + Language - Right Side */}
+          <div className="md:hidden flex items-center gap-2">
+            <LanguageSelector />
+            <button
+              className="text-gray-300 hover:text-yellow-400 transition-colors p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
