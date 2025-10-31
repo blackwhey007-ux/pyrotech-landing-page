@@ -155,10 +155,6 @@ const Footer: React.FC = () => {
             <Link to="/impressum" className="hover:text-primary-yellow transition-colors duration-300">
               Impressum
             </Link>
-            <span className="hidden md:inline">•</span>
-            <a href="#" className="hover:text-primary-yellow transition-colors duration-300">
-              Datenschutz
-            </a>
           </div>
         </motion.div>
       </div>
