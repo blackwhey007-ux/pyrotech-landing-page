@@ -9,6 +9,28 @@ const PricingSection: React.FC = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   
+  // Map extra IDs to translation keys
+  const getTranslatedExtra = (extraId: string) => {
+    const keyMap: { [key: string]: string } = {
+      'musik-synchronisation': 'music',
+      'lichtshow': 'lichtshow',
+      'lichterbild': 'lichtbild',
+      'feuerschalen': 'feuerschalen',
+      'grand-finale': 'finale',
+      'hochzeitstanzeffekte': 'hochzeitstanz',
+      'nebelmaschine': 'nebelmaschine',
+      'sparkular': 'sparkular',
+      'flame': 'flame'
+    };
+    
+    const key = keyMap[extraId] || extraId;
+    return {
+      name: t(`pricing.extras.items.${key}.name`),
+      price: t(`pricing.extras.items.${key}.price`),
+      description: t(`pricing.extras.items.${key}.description`)
+    };
+  };
+  
   return (
     <section id="pricing" className="relative py-12 md:py-16 lg:py-20 px-4 bg-black overflow-hidden">
       {/* 3D Fireworks Background */}
@@ -46,28 +68,31 @@ const PricingSection: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 max-w-5xl mx-auto">
-            {PRICING_EXTRAS.map((extra) => (
-              <div
-                key={extra.id}
-                className="bg-black/50 backdrop-blur-lg rounded-xl p-3 md:p-6 border border-white/10 hover:border-primary-yellow/50 transition-all duration-300 group cursor-pointer"
-                onClick={() => navigate('/contact-us')}
-              >
-                <div className="text-center">
-                  <div className="text-2xl md:text-3xl mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">
-                    {extra.icon}
+            {PRICING_EXTRAS.map((extra) => {
+              const translated = getTranslatedExtra(extra.id);
+              return (
+                <div
+                  key={extra.id}
+                  className="bg-black/50 backdrop-blur-lg rounded-xl p-3 md:p-6 border border-white/10 hover:border-primary-yellow/50 transition-all duration-300 group cursor-pointer"
+                  onClick={() => navigate('/contact-us')}
+                >
+                  <div className="text-center">
+                    <div className="text-2xl md:text-3xl mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">
+                      {extra.icon}
+                    </div>
+                    <h4 className="text-sm md:text-lg font-semibold text-white mb-1 md:mb-2">
+                      {translated.name}
+                    </h4>
+                    <p className="text-lg md:text-2xl font-bold text-primary-yellow mb-2 md:mb-3">
+                      {translated.price}
+                    </p>
+                    <p className="text-text-secondary text-xs md:text-sm">
+                      {translated.description}
+                    </p>
                   </div>
-                  <h4 className="text-sm md:text-lg font-semibold text-white mb-1 md:mb-2">
-                    {extra.name}
-                  </h4>
-                  <p className="text-lg md:text-2xl font-bold text-primary-yellow mb-2 md:mb-3">
-                    {extra.price}
-                  </p>
-                  <p className="text-text-secondary text-xs md:text-sm">
-                    {extra.description}
-                  </p>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

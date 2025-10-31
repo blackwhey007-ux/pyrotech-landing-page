@@ -148,6 +148,13 @@ export const PRICING_EXTRAS: PricingExtra[] = [
     icon: '🎵'
   },
   {
+    id: 'lichtshow',
+    name: 'Lichtshow',
+    price: '299€',
+    description: 'Spektakuläre Lichteffekte',
+    icon: '💡'
+  },
+  {
     id: 'lichterbild',
     name: 'Lichterbild',
     price: '59€',
