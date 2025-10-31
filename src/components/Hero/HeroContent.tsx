@@ -32,14 +32,13 @@ const HeroContent: React.FC = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
       >
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-md">
-          Willkommen bei Pyrotech Event
+          {t('hero.welcome')}
         </h2>
-        <h3 className="text-lg md:text-2xl lg:text-3xl font-semibold text-yellow-400 mb-4 leading-tight drop-shadow-lg">
-          DIE FEUERWERK-EXPERTEN FÜR<br />
-          UNVERGESSLICHE MOMENTE
+        <h3 className="text-lg md:text-2xl lg:text-3xl font-semibold text-yellow-400 mb-4 leading-tight drop-shadow-lg whitespace-pre-line">
+          {t('hero.tagline')}
         </h3>
         <p className="text-base md:text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-          Professionelle Pyrotechnik für Festivals, Hochzeiten & Firmenevents in ganz Deutschland
+          {t('hero.description')}
         </p>
       </motion.div>
 

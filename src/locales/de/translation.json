@@ -9,8 +9,9 @@
     "impressum": "Impressum"
   },
   "hero": {
-    "title": "Spektakuläre Feuerwerkshows",
-    "subtitle": "Professionelle Pyrotechnik für unvergessliche Momente",
+    "welcome": "Willkommen bei Pyrotech Event",
+    "tagline": "DIE FEUERWERK-EXPERTEN FÜR\nUNVERGESSLICHE MOMENTE",
+    "description": "Professionelle Pyrotechnik für Festivals, Hochzeiten & Firmenevents in ganz Deutschland",
     "ctaBook": "Jetzt Beratung buchen",
     "ctaView": "Pakete ansehen"
   },

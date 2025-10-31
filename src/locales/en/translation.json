@@ -9,8 +9,9 @@
     "impressum": "Legal Notice"
   },
   "hero": {
-    "title": "Spectacular Fireworks Displays",
-    "subtitle": "Professional pyrotechnics for unforgettable moments",
+    "welcome": "Welcome to Pyrotech Event",
+    "tagline": "THE FIREWORKS EXPERTS FOR\nUNFORGETTABLE MOMENTS",
+    "description": "Professional pyrotechnics for festivals, weddings & corporate events throughout Germany",
     "ctaBook": "Book Consultation",
     "ctaView": "View Packages"
   },
