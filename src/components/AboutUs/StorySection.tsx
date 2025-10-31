@@ -96,7 +96,6 @@ const StorySection: React.FC = () => {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="text-4xl mb-4">{value.icon}</div>
                 <h4 className="text-xl font-bold text-white mb-3">{value.title}</h4>
                 <p className="text-gray-300">{value.description}</p>
               </motion.div>
