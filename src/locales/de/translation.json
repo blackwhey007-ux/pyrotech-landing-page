@@ -214,6 +214,14 @@
   },
   "contact": {
     "title": "Beratung Anfragen",
+    "titleSection": "Fragen? Wir Sind Für Dich Da!",
+    "subtitle": "Kontaktiere uns für eine kostenlose Beratung",
+    "description": "Unser erfahrenes Team steht Dir gerne zur Verfügung. Kontaktiere uns für eine kostenlose Beratung oder beantworte Deine Fragen rund um unsere Feuerwerk-Services.",
+    "whyTitle": "Warum Pyrotech?",
+    "why1": "Kostenlose Erstberatung",
+    "why2": "Individuelle Konzepte",
+    "why3": "Vollständige Genehmigungen",
+    "why4": "Professionelle Durchführung",
     "name": "Name *",
     "phone": "Telefon *",
     "email": "E-Mail *",
@@ -236,6 +244,16 @@
       "Festival": "Festival",
       "Geburtstag": "Geburtstag",
       "Sonstiges": "Sonstiges"
+    },
+    "whatsappMessagePrefix": "Hallo! Ich interessiere mich für ein Feuerwerk-Event",
+    "notSpecified": "Nicht angegeben",
+    "noAdditionalMessage": "Keine zusätzliche Nachricht",
+    "whatsappMessageSuffix": "Ich freue mich auf Ihre Rückmeldung!",
+    "labels": {
+      "telefon": "Telefon",
+      "whatsapp": "WhatsApp",
+      "email": "E-Mail",
+      "adresse": "Adresse"
     }
   },
   "footer": {

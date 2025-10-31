@@ -214,6 +214,14 @@
   },
   "contact": {
     "title": "Request Consultation",
+    "titleSection": "Questions? We're Here For You!",
+    "subtitle": "Contact us for a free consultation",
+    "description": "Our experienced team is at your service. Contact us for a free consultation or ask your questions about our fireworks services.",
+    "whyTitle": "Why Pyrotech?",
+    "why1": "Free initial consultation",
+    "why2": "Individual concepts",
+    "why3": "Complete authorizations",
+    "why4": "Professional execution",
     "name": "Name *",
     "phone": "Phone *",
     "email": "Email *",
@@ -236,6 +244,16 @@
       "Festival": "Festival",
       "Geburtstag": "Birthday",
       "Sonstiges": "Other"
+    },
+    "whatsappMessagePrefix": "Hello! I'm interested in a fireworks event",
+    "notSpecified": "Not specified",
+    "noAdditionalMessage": "No additional message",
+    "whatsappMessageSuffix": "Looking forward to hearing from you!",
+    "labels": {
+      "telefon": "Phone",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "adresse": "Address"
     }
   },
   "footer": {

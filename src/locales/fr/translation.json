@@ -214,6 +214,14 @@
   },
   "contact": {
     "title": "Demander une Consultation",
+    "titleSection": "Des Questions ? Nous Sommes Là Pour Vous !",
+    "subtitle": "Contactez-nous pour une consultation gratuite",
+    "description": "Notre équipe expérimentée est à votre entière disposition. Contactez-nous pour une consultation gratuite ou posez vos questions sur nos services pyrotechniques.",
+    "whyTitle": "Pourquoi Pyrotech ?",
+    "why1": "Première consultation gratuite",
+    "why2": "Concepts individuels",
+    "why3": "Autorisations complètes",
+    "why4": "Exécution professionnelle",
     "name": "Nom *",
     "phone": "Téléphone *",
     "email": "E-mail *",
@@ -236,6 +244,16 @@
       "Festival": "Festival",
       "Geburtstag": "Anniversaire",
       "Sonstiges": "Autre"
+    },
+    "whatsappMessagePrefix": "Bonjour ! Je suis intéressé(e) par un événement pyrotechnique",
+    "notSpecified": "Non spécifié",
+    "noAdditionalMessage": "Pas de message supplémentaire",
+    "whatsappMessageSuffix": "J'attends votre retour avec impatience !",
+    "labels": {
+      "telefon": "Téléphone",
+      "whatsapp": "WhatsApp",
+      "email": "E-mail",
+      "adresse": "Adresse"
     }
   },
   "footer": {

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Phone, MessageCircle, Mail, MapPin, ChevronDown } from 'lucide-react';
 import { CONTACT_INFO } from '../../utils/constants';
 import GoogleMap from './GoogleMap';
 
 const ContactInfo: React.FC = () => {
+  const { t } = useTranslation();
   const [showMap, setShowMap] = useState(false);
 
   // Click handlers
@@ -13,7 +15,7 @@ const ContactInfo: React.FC = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent('Hallo! Ich interessiere mich für ein Feuerwerk-Event.');
+    const message = encodeURIComponent(t('contact.whatsappMessagePrefix'));
     window.open(`https://wa.me/491601203077?text=${message}`, '_blank');
   };
 
@@ -24,7 +26,7 @@ const ContactInfo: React.FC = () => {
   const contactItems = [
     {
       icon: Phone,
-      title: 'Telefon',
+      title: t('contact.labels.telefon'),
       main: CONTACT_INFO.phone,
       sub: CONTACT_INFO.phoneHours,
       color: 'text-primary-red',
@@ -33,7 +35,7 @@ const ContactInfo: React.FC = () => {
     },
     {
       icon: MessageCircle,
-      title: 'WhatsApp',
+      title: t('contact.labels.whatsapp'),
       main: CONTACT_INFO.whatsapp,
       sub: CONTACT_INFO.whatsappHours,
       color: 'text-green-400',
@@ -42,7 +44,7 @@ const ContactInfo: React.FC = () => {
     },
     {
       icon: Mail,
-      title: 'E-Mail',
+      title: t('contact.labels.email'),
       main: CONTACT_INFO.email,
       sub: CONTACT_INFO.emailHours,
       color: 'text-primary-yellow',
@@ -51,7 +53,7 @@ const ContactInfo: React.FC = () => {
     },
     {
       icon: MapPin,
-      title: 'Adresse',
+      title: t('contact.labels.adresse'),
       main: CONTACT_INFO.address.company,
       sub: `${CONTACT_INFO.address.street}, ${CONTACT_INFO.address.city}`,
       color: 'text-blue-400',
@@ -69,12 +71,10 @@ const ContactInfo: React.FC = () => {
         viewport={{ once: true }}
       >
         <h3 className="text-2xl font-bold text-white mb-6">
-          Fragen? Wir Sind Für Dich Da!
+          {t('contact.titleSection')}
         </h3>
         <p className="text-text-secondary leading-relaxed">
-          Unser erfahrenes Team steht Dir gerne zur Verfügung. 
-          Kontaktiere uns für eine kostenlose Beratung oder 
-          beantworte Deine Fragen rund um unsere Feuerwerk-Services.
+          {t('contact.description')}
         </p>
       </motion.div>
 
@@ -141,24 +141,24 @@ const ContactInfo: React.FC = () => {
         viewport={{ once: true }}
       >
         <h4 className="text-white font-semibold mb-3">
-          Warum Pyrotech?
+          {t('contact.whyTitle')}
         </h4>
         <ul className="space-y-2 text-text-secondary text-sm">
           <li className="flex items-center gap-2">
             <span className="text-primary-yellow">✓</span>
-            Kostenlose Erstberatung
+            {t('contact.why1')}
           </li>
           <li className="flex items-center gap-2">
             <span className="text-primary-yellow">✓</span>
-            Individuelle Konzepte
+            {t('contact.why2')}
           </li>
           <li className="flex items-center gap-2">
             <span className="text-primary-yellow">✓</span>
-            Vollständige Genehmigungen
+            {t('contact.why3')}
           </li>
           <li className="flex items-center gap-2">
             <span className="text-primary-yellow">✓</span>
-            Professionelle Durchführung
+            {t('contact.why4')}
           </li>
         </ul>
       </motion.div>
