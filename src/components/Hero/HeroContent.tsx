@@ -1,11 +1,13 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import Button from '../shared/Button';
 
 const HeroContent: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { t } = useTranslation();
 
   return (
     <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center">
@@ -54,7 +56,7 @@ const HeroContent: React.FC = () => {
           className="min-w-[200px] shadow-lg"
           onClick={() => navigate('/contact-us')}
         >
-          Jetzt Beratung buchen
+          {t('hero.ctaBook')}
         </Button>
         <Button
           variant="secondary"
@@ -68,7 +70,7 @@ const HeroContent: React.FC = () => {
             }
           }}
         >
-          Pakete ansehen
+          {t('hero.ctaView')}
         </Button>
       </motion.div>
 
