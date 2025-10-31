@@ -208,9 +208,22 @@
     "button": "Verfügbarkeit Prüfen 🔥"
   },
   "trust": {
-    "insured": "Voll Versichert",
-    "expertise": "Professionelle Expertise",
-    "nationwide": "Bundesweit"
+    "insured": {
+      "title": "Voll Versichert",
+      "description": "Umfassender Schutz"
+    },
+    "expertise": {
+      "title": "Professionelle Expertise",
+      "description": "Spitzenqualität"
+    },
+    "nationwide": {
+      "title": "Bundesweit",
+      "description": "Deutschlandweite Verfügbarkeit"
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Rund um die Uhr"
+    }
   },
   "contact": {
     "title": "Beratung Anfragen",

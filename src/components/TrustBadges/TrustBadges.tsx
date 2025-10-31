@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { TRUST_BADGES } from '../../utils/constants';
 import { 
   Shield, 
@@ -11,6 +12,7 @@ import {
 } from 'lucide-react';
 
 const TrustBadges: React.FC = () => {
+  const { t } = useTranslation();
   const iconMap = {
     Shield,
     ShieldCheck,
@@ -20,12 +22,29 @@ const TrustBadges: React.FC = () => {
     Headphones
   };
 
+  // Map badge IDs to translation keys
+  const getTranslatedContent = (badgeId: string) => {
+    const keyMap: { [key: string]: string } = {
+      'voll-versichert': 'insured',
+      'erfahrung': 'expertise',
+      'bundesweit': 'nationwide',
+      '24-7-support': 'support'
+    };
+    
+    const key = keyMap[badgeId] || badgeId;
+    return {
+      title: t(`trust.${key}.title`),
+      description: t(`trust.${key}.description`)
+    };
+  };
+
   return (
     <section className="py-16 px-4 bg-black">
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {TRUST_BADGES.map((badge, index) => {
             const IconComponent = iconMap[badge.icon as keyof typeof iconMap];
+            const translated = getTranslatedContent(badge.id);
             
             return (
               <motion.div
@@ -51,12 +70,12 @@ const TrustBadges: React.FC = () => {
 
                 {/* Title */}
                 <h3 className="text-white font-semibold text-sm mb-2 group-hover:text-primary-yellow transition-colors duration-300">
-                  {badge.title}
+                  {translated.title}
                 </h3>
 
                 {/* Description */}
                 <p className="text-text-secondary text-xs leading-relaxed">
-                  {badge.description}
+                  {translated.description}
                 </p>
               </motion.div>
             );

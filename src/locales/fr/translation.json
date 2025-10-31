@@ -208,9 +208,22 @@
     "button": "Vérifier la Disponibilité 🔥"
   },
   "trust": {
-    "insured": "Entièrement Assuré",
-    "expertise": "Expertise Professionnelle",
-    "nationwide": "National"
+    "insured": {
+      "title": "Entièrement Assuré",
+      "description": "Protection Complète"
+    },
+    "expertise": {
+      "title": "Expertise Professionnelle",
+      "description": "Qualité Supérieure"
+    },
+    "nationwide": {
+      "title": "National",
+      "description": "Disponibilité en Toute Allemagne"
+    },
+    "support": {
+      "title": "Support 24/7",
+      "description": "Disponible à Tout Moment"
+    }
   },
   "contact": {
     "title": "Demander une Consultation",

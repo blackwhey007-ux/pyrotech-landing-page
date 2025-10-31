@@ -208,9 +208,22 @@
     "button": "Check Availability 🔥"
   },
   "trust": {
-    "insured": "Fully Insured",
-    "expertise": "Professional Expertise",
-    "nationwide": "Nationwide"
+    "insured": {
+      "title": "Fully Insured",
+      "description": "Comprehensive Protection"
+    },
+    "expertise": {
+      "title": "Professional Expertise",
+      "description": "Top Quality"
+    },
+    "nationwide": {
+      "title": "Nationwide",
+      "description": "Germany-wide Availability"
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Around the Clock"
+    }
   },
   "contact": {
     "title": "Request Consultation",
