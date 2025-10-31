@@ -27,16 +27,7 @@ export const EVENT_IMAGES = {
   hochzeitstanz: '/images/Wähle Deinen Anlass/first dance.jpg',
   firmenevent: '/images/Wähle Deinen Anlass/croprate events.jpg',
   festival: '/images/Wähle Deinen Anlass/Festival.jpg',
-  schuetzenfest: '/images/Wähle Deinen Anlass/traditional festivals.jpg',
-  firmenfeiern: getImagePlaceholder('events', 'Firmenfeiern', 380, 280),
-  festivals: getImagePlaceholder('events', 'Festivals', 380, 280),
-  stadtfeste: getImagePlaceholder('events', 'Stadtfeste', 380, 280),
-  jahrestage: getImagePlaceholder('events', 'Jahrestage', 380, 280),
-  produktlaunches: getImagePlaceholder('events', 'Produktlaunches', 380, 280),
-  konzerte: getImagePlaceholder('events', 'Konzerte', 380, 280),
-  sportevents: getImagePlaceholder('events', 'Sportevents', 380, 280),
-  hochzeitstaenze: getImagePlaceholder('events', 'Hochzeitstänze', 380, 280),
-  heiratsantraege: getImagePlaceholder('events', 'Heiratsanträge', 380, 280),
+  schuetzenfest: '/images/Wähle Deinen Anlass/traditional festivals.jpg'
 };
 
 export const TESTIMONIAL_IMAGES = {
