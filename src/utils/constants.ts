@@ -359,14 +359,24 @@ export const STORY_CONTENT = {
   ],
   values: [
     {
-      title: 'Leidenschaft für Details',
-      description: 'Jedes Feuerwerk wird individuell geplant und auf die Musik des Paares abgestimmt.',
-      icon: '🎵'
+      title: 'Sicherheit',
+      description: 'Sicherheit hat bei uns oberste Priorität – in der Planung, im Aufbau und in der Durchführung jeder Show. Wir arbeiten ausschließlich mit geprüften Materialien und nach den geltenden gesetzlichen Vorschriften.',
+      icon: '🛡️'
     },
     {
-      title: 'Persönliche Betreuung',
-      description: 'Von der ersten Beratung bis zum Event-Tag – wir sind immer für Sie da.',
-      icon: '🤝'
+      title: 'Kreativität',
+      description: 'Jedes Feuerwerk ist ein Unikat. Wir kombinieren Licht, Farbe und Musik zu emotionalen Momenten, die in Erinnerung bleiben.',
+      icon: '🎨'
+    },
+    {
+      title: 'Professionalität',
+      description: 'Von der ersten Idee bis zum letzten Funken – wir arbeiten präzise, zuverlässig und mit höchstem Anspruch an Qualität.',
+      icon: '⭐'
+    },
+    {
+      title: 'Zuverlässigkeit',
+      description: 'Wir halten, was wir versprechen – pünktlich, transparent und mit voller Verantwortung für unser Handwerk.',
+      icon: '✅'
     }
   ]
 };
