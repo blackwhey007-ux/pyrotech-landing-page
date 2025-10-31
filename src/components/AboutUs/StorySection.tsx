@@ -1,9 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { STORY_CONTENT } from '../../utils/constants';
+import { useTranslation } from 'react-i18next';
 import Story3D from './Story3D';
 
 const StorySection: React.FC = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="relative py-16 md:py-20 lg:py-24 px-4 bg-black overflow-hidden">
       {/* 3D Background */}
@@ -26,10 +28,10 @@ const StorySection: React.FC = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Über Pyrotech Event
+            {t('about.title')}
           </h2>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-            {STORY_CONTENT.company.tagline}
+            {t('about.tagline')}
           </p>
         </motion.div>
 
@@ -43,31 +45,43 @@ const StorySection: React.FC = () => {
         >
           <div className="text-center">
             <p className="text-xl md:text-2xl text-white leading-relaxed">
-              {STORY_CONTENT.company.description}
+              {t('about.description')}
             </p>
           </div>
         </motion.div>
 
         {/* Principles */}
         <div className="grid md:grid-cols-2 gap-8 mb-20">
-          {STORY_CONTENT.principles.map((principle, index) => (
-            <motion.div
-              key={index}
-              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 md:p-8 border border-gray-700/50 hover:border-yellow-500/30 transition-all duration-300"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
-                {principle.title}
-              </h3>
-              <p className="text-gray-300 leading-relaxed">
-                {principle.description}
-              </p>
-            </motion.div>
-          ))}
+          <motion.div
+            className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 md:p-8 border border-gray-700/50 hover:border-yellow-500/30 transition-all duration-300"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02 }}
+          >
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+              {t('about.principles.title1')}
+            </h3>
+            <p className="text-gray-300 leading-relaxed">
+              {t('about.principles.description1')}
+            </p>
+          </motion.div>
+          <motion.div
+            className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 md:p-8 border border-gray-700/50 hover:border-yellow-500/30 transition-all duration-300"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02 }}
+          >
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+              {t('about.principles.title2')}
+            </h3>
+            <p className="text-gray-300 leading-relaxed">
+              {t('about.principles.description2')}
+            </p>
+          </motion.div>
         </div>
 
         {/* Values */}
@@ -79,23 +93,53 @@ const StorySection: React.FC = () => {
           viewport={{ once: true }}
         >
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-12 text-center">
-            Unsere Werte
+            {t('about.values.title')}
           </h3>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {STORY_CONTENT.values.map((value, index) => (
-              <motion.div
-                key={index}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 hover:border-yellow-500/30 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <h4 className="text-xl font-bold text-white mb-3">{value.title}</h4>
-                <p className="text-gray-300">{value.description}</p>
-              </motion.div>
-            ))}
+            <motion.div
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 hover:border-yellow-500/30 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <h4 className="text-xl font-bold text-white mb-3">{t('about.values.sicherheit.title')}</h4>
+              <p className="text-gray-300">{t('about.values.sicherheit.description')}</p>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 hover:border-yellow-500/30 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <h4 className="text-xl font-bold text-white mb-3">{t('about.values.kreativitaet.title')}</h4>
+              <p className="text-gray-300">{t('about.values.kreativitaet.description')}</p>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 hover:border-yellow-500/30 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <h4 className="text-xl font-bold text-white mb-3">{t('about.values.professionalitaet.title')}</h4>
+              <p className="text-gray-300">{t('about.values.professionalitaet.description')}</p>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 hover:border-yellow-500/30 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <h4 className="text-xl font-bold text-white mb-3">{t('about.values.zuverlaessigkeit.title')}</h4>
+              <p className="text-gray-300">{t('about.values.zuverlaessigkeit.description')}</p>
+            </motion.div>
           </div>
         </motion.div>
       </div>
