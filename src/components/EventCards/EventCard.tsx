@@ -99,7 +99,6 @@ const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
 
         {/* Content */}
         <div className="relative z-10 p-4 md:p-6 h-full flex flex-col justify-end">
-          <div className="text-3xl md:text-4xl mb-2 md:mb-3">{event.icon}</div>
           <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2">
             {translatedTitle}
           </h3>
