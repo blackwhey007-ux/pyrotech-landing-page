@@ -16,8 +16,8 @@ const Footer: React.FC = () => {
     {
       title: 'Navigation',
       links: [
-        { name: 'Über Uns', href: '/about-us', isInternal: true },
         { name: 'Preise', href: '/preise', isInternal: true },
+        { name: 'Über Uns', href: '/about-us', isInternal: true },
         { name: 'Kontakt', href: '/contact-us', isInternal: true }
       ]
     },
