@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { 
   Phone, 
   Mail, 
@@ -12,25 +13,27 @@ import {
 } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+  
   const footerSections = [
     {
       title: 'Navigation',
       links: [
-        { name: 'Preise', href: '/preise', isInternal: true },
-        { name: 'Über Uns', href: '/about-us', isInternal: true },
-        { name: 'Kontakt', href: '/contact-us', isInternal: true }
+        { name: t('nav.pricing'), href: '/preise', isInternal: true },
+        { name: t('nav.about'), href: '/about-us', isInternal: true },
+        { name: t('nav.contact'), href: '/contact-us', isInternal: true }
       ]
     },
     {
       title: 'Kontakt',
       links: [
-        { name: 'Telefon', href: 'tel:+492119998877', icon: Phone },
-        { name: 'E-Mail', href: 'mailto:pyrotechevent@gmx.de', icon: Mail },
-        { name: 'WhatsApp', href: 'https://wa.me/491601203077', icon: MessageCircle }
+        { name: t('footer.phone'), href: 'tel:+492119998877', icon: Phone },
+        { name: t('footer.email'), href: 'mailto:pyrotechevent@gmx.de', icon: Mail },
+        { name: t('footer.whatsapp'), href: 'https://wa.me/491601203077', icon: MessageCircle }
       ]
     },
     {
-      title: 'Folgen Sie Uns',
+      title: t('footer.followUs'),
       links: [
         { name: 'Instagram', href: 'https://www.instagram.com/pyrotech.event/', icon: Instagram },
         { name: 'YouTube', href: 'https://www.youtube.com/@feuerwerk_event', icon: Youtube },
@@ -159,21 +162,21 @@ const Footer: React.FC = () => {
               </span>
             </Link>
             <span>•</span>
-            <span>© 2025 Pyrotech Event</span>
+            <span>{t('footer.copyright')}</span>
             <span>•</span>
             <Link to="/impressum" className="hover:text-primary-yellow transition-colors duration-300">
-              Impressum
+              {t('nav.impressum')}
             </Link>
             <span>•</span>
-            <span>Arcadiastr.24, 40472 Düsseldorf</span>
+            <span>{t('footer.address')}</span>
           </div>
 
           {/* Mobile Bottom Bar - Same as before */}
           <div className="flex md:hidden flex-wrap items-center justify-center gap-2">
-            <span>© 2025 Pyrotech Event</span>
+            <span>{t('footer.copyright')}</span>
             <span>•</span>
             <Link to="/impressum" className="hover:text-primary-yellow transition-colors duration-300">
-              Impressum
+              {t('nav.impressum')}
             </Link>
           </div>
         </motion.div>
