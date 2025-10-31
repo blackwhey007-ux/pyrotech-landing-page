@@ -49,7 +49,12 @@ const Header: React.FC = () => {
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20 relative">
-          {/* Mobile Menu Button - Right Side */}
+          {/* Language Selector - Mobile Top Left */}
+          <div className="md:hidden">
+            <LanguageSelector />
+          </div>
+
+          {/* Mobile Spacer - Right Side */}
           <div className="flex-1 md:hidden" />
 
           {/* Logo - Centered on Mobile */}
@@ -99,9 +104,8 @@ const Header: React.FC = () => {
             <LanguageSelector />
           </div>
 
-          {/* Mobile Menu Button + Language - Right Side */}
-          <div className="md:hidden flex items-center gap-2">
-            <LanguageSelector />
+          {/* Mobile Menu Button - Right Side */}
+          <div className="md:hidden">
             <button
               className="text-gray-300 hover:text-yellow-400 transition-colors p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
