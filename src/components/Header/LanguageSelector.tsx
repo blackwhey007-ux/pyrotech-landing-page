@@ -56,14 +56,14 @@ const LanguageSelector: React.FC = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="absolute top-full mt-2 left-0 w-44 md:w-48 bg-black/95 backdrop-blur-lg border border-yellow-500/20 rounded-lg overflow-hidden shadow-2xl z-[60]"
+            className="absolute top-full mt-2 left-0 w-32 md:w-36 bg-black/95 backdrop-blur-lg border border-yellow-500/20 rounded-lg overflow-hidden shadow-2xl z-[60]"
           >
             {languages.map((lang) => (
               <button
                 key={lang.code}
                 onClick={() => changeLanguage(lang.code)}
                 className={`
-                  w-full flex items-center gap-2 md:gap-3 px-3 md:px-4 py-2.5 md:py-3 text-left transition-all duration-200
+                  w-full flex items-center justify-center gap-2 px-3 md:px-4 py-2.5 md:py-3 transition-all duration-200
                   ${
                     i18n.language === lang.code
                       ? 'bg-yellow-500/10 text-yellow-400'
@@ -71,8 +71,8 @@ const LanguageSelector: React.FC = () => {
                   }
                 `}
               >
-                <span className="text-xl md:text-2xl flex-shrink-0">{lang.flag}</span>
-                <span className="font-medium text-sm md:text-base">{lang.name}</span>
+                <span className="text-xl md:text-2xl">{lang.flag}</span>
+                <span className="font-bold text-base md:text-lg">{lang.code.toUpperCase()}</span>
               </button>
             ))}
           </motion.div>
