@@ -7,34 +7,56 @@ import GoogleMap from './GoogleMap';
 const ContactInfo: React.FC = () => {
   const [showMap, setShowMap] = useState(false);
 
+  // Click handlers
+  const handlePhoneClick = () => {
+    window.location.href = `tel:${CONTACT_INFO.phone}`;
+  };
+
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent('Hallo! Ich interessiere mich für ein Feuerwerk-Event.');
+    window.open(`https://wa.me/491601203077?text=${message}`, '_blank');
+  };
+
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${CONTACT_INFO.email}?subject=Anfrage%20Feuerwerk-Event`;
+  };
+
   const contactItems = [
     {
       icon: Phone,
       title: 'Telefon',
       main: CONTACT_INFO.phone,
       sub: CONTACT_INFO.phoneHours,
-      color: 'text-primary-red'
+      color: 'text-primary-red',
+      actionType: 'phone',
+      onClick: handlePhoneClick
     },
     {
       icon: MessageCircle,
       title: 'WhatsApp',
       main: CONTACT_INFO.whatsapp,
       sub: CONTACT_INFO.whatsappHours,
-      color: 'text-green-400'
+      color: 'text-green-400',
+      actionType: 'whatsapp',
+      onClick: handleWhatsAppClick
     },
     {
       icon: Mail,
       title: 'E-Mail',
       main: CONTACT_INFO.email,
       sub: CONTACT_INFO.emailHours,
-      color: 'text-primary-yellow'
+      color: 'text-primary-yellow',
+      actionType: 'email',
+      onClick: handleEmailClick
     },
     {
       icon: MapPin,
       title: 'Adresse',
       main: CONTACT_INFO.address.company,
       sub: `${CONTACT_INFO.address.street}, ${CONTACT_INFO.address.city}`,
-      color: 'text-blue-400'
+      color: 'text-blue-400',
+      actionType: 'address',
+      onClick: () => setShowMap(!showMap)
     }
   ];
 
@@ -59,23 +81,23 @@ const ContactInfo: React.FC = () => {
       <div className="space-y-6">
         {contactItems.map((item, index) => {
           const IconComponent = item.icon;
-          const isAddress = item.title === 'Adresse';
+          const isAddress = item.actionType === 'address';
           
           return (
             <motion.div
               key={item.title}
-              className={`flex items-start gap-4 group ${isAddress ? 'cursor-pointer' : ''}`}
+              className="flex items-start gap-4 group cursor-pointer"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={isAddress ? { x: 5 } : {}}
-              onClick={isAddress ? () => setShowMap(!showMap) : undefined}
+              whileHover={{ x: 5 }}
+              onClick={item.onClick}
             >
               <motion.div
                 className="flex-shrink-0 w-12 h-12 bg-black/50 backdrop-blur-lg rounded-full flex items-center justify-center group-hover:bg-gradient-primary transition-all duration-300"
-                whileHover={isAddress ? { scale: 1.1 } : {}}
-                whileTap={isAddress ? { scale: 0.95 } : {}}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <IconComponent className={`w-6 h-6 ${item.color} group-hover:text-black transition-colors duration-300`} />
               </motion.div>
