@@ -306,11 +306,6 @@ export const STORY_CONTENT = {
       icon: '🎵'
     },
     {
-      title: 'Sicherheit an erster Stelle',
-      description: 'Langjährige Erfahrung und TÜV-Zertifizierung garantieren höchste Sicherheitsstandards.',
-      icon: '🛡️'
-    },
-    {
       title: 'Persönliche Betreuung',
       description: 'Von der ersten Beratung bis zum Event-Tag – wir sind immer für Sie da.',
       icon: '🤝'
