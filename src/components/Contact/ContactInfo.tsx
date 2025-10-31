@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, MessageCircle, Mail, MapPin } from 'lucide-react';
 import { CONTACT_INFO } from '../../utils/constants';
+import GoogleMap from './GoogleMap';
 
 const ContactInfo: React.FC = () => {
   const contactItems = [
@@ -89,6 +90,9 @@ const ContactInfo: React.FC = () => {
           );
         })}
       </div>
+
+      {/* Google Map */}
+      <GoogleMap />
 
       {/* Additional Info */}
       <motion.div

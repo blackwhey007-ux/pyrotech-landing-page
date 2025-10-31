@@ -245,8 +245,8 @@ export const CONTACT_INFO = {
   emailHours: 'Antwort innerhalb 24h',
   address: {
     company: 'Pyrotech Event',
-    street: '40472 Rath',
-    city: ''
+    street: 'Arcadiastr.24',
+    city: '40472 Düsseldorf'
   }
 };
 
