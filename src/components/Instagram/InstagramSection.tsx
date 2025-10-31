@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Instagram } from 'lucide-react';
 import InstagramFeed from './InstagramFeed';
 import Instagram3D from './Instagram3D';
@@ -7,6 +8,8 @@ import SectionTitle from '../shared/SectionTitle';
 import Button from '../shared/Button';
 
 const InstagramSection: React.FC = () => {
+  const { t } = useTranslation();
+  
   const handleInstagramClick = () => {
     window.open('https://www.instagram.com/pyrotech.event/', '_blank');
   };
@@ -25,8 +28,8 @@ const InstagramSection: React.FC = () => {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <SectionTitle
-          title="Folge Uns auf Instagram"
-          subtitle="Entdecke unsere neuesten Shows und Behind-the-Scenes"
+          title={t('instagram.title')}
+          subtitle={t('instagram.subtitle')}
         />
         
         {/* Instagram Handle */}
@@ -71,7 +74,7 @@ const InstagramSection: React.FC = () => {
             onClick={handleInstagramClick}
             className="text-lg px-8 py-4"
           >
-            Folge uns auf Instagram 📸
+            {t('instagram.button')}
           </Button>
         </motion.div>
       </div>

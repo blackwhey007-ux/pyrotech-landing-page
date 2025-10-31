@@ -273,10 +273,21 @@
     "tagline": "Die Feuerwerk-Experten",
     "address": "Arcadiastr.24, 40472 Düsseldorf",
     "copyright": "© 2025 Pyrotech Event",
+    "navigation": "Navigation",
+    "contact": "Kontakt",
     "followUs": "Folgen Sie Uns",
     "phone": "Telefon",
     "email": "E-Mail",
     "whatsapp": "WhatsApp"
+  },
+  "video": {
+    "title": "Unsere Spektakulären Shows",
+    "subtitle": "Erleben Sie die Magie unserer Feuerwerke"
+  },
+  "instagram": {
+    "title": "Folge Uns auf Instagram",
+    "subtitle": "Entdecke unsere neuesten Shows und Behind-the-Scenes",
+    "button": "Folge uns auf Instagram 📸"
   },
   "about": {
     "title": "Über Pyrotech Event",

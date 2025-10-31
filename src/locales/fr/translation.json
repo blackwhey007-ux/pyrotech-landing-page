@@ -273,10 +273,21 @@
     "tagline": "Les Experts en Feux d'Artifice",
     "address": "Arcadiastr.24, 40472 Düsseldorf",
     "copyright": "© 2025 Pyrotech Event",
+    "navigation": "Navigation",
+    "contact": "Contact",
     "followUs": "Suivez-Nous",
     "phone": "Téléphone",
     "email": "E-mail",
     "whatsapp": "WhatsApp"
+  },
+  "video": {
+    "title": "Nos Spectacles Spectaculaires",
+    "subtitle": "Découvrez la Magie de Nos Feux d'Artifice"
+  },
+  "instagram": {
+    "title": "Suivez-Nous sur Instagram",
+    "subtitle": "Découvrez nos derniers spectacles et coulisses",
+    "button": "Suivez-nous sur Instagram 📸"
   },
   "about": {
     "title": "À Propos de Pyrotech Event",

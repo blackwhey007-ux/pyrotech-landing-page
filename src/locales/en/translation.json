@@ -273,10 +273,21 @@
     "tagline": "The Fireworks Experts",
     "address": "Arcadiastr.24, 40472 Düsseldorf",
     "copyright": "© 2025 Pyrotech Event",
+    "navigation": "Navigation",
+    "contact": "Contact",
     "followUs": "Follow Us",
     "phone": "Phone",
     "email": "Email",
     "whatsapp": "WhatsApp"
+  },
+  "video": {
+    "title": "Our Spectacular Shows",
+    "subtitle": "Experience the Magic of Our Fireworks"
+  },
+  "instagram": {
+    "title": "Follow Us on Instagram",
+    "subtitle": "Discover our latest shows and behind-the-scenes",
+    "button": "Follow us on Instagram 📸"
   },
   "about": {
     "title": "About Pyrotech Event",

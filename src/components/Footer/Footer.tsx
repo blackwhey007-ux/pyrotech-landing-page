@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
   
   const footerSections = [
     {
-      title: 'Navigation',
+      title: t('footer.navigation'),
       links: [
         { name: t('nav.pricing'), href: '/preise', isInternal: true },
         { name: t('nav.about'), href: '/about-us', isInternal: true },
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
       ]
     },
     {
-      title: 'Kontakt',
+      title: t('footer.contact'),
       links: [
         { name: t('footer.phone'), href: 'tel:+492119998877', icon: Phone },
         { name: t('footer.email'), href: 'mailto:pyrotechevent@gmx.de', icon: Mail },
