@@ -133,11 +133,6 @@
           "price": "149€",
           "description": "Feuerwerk perfekt zur Musik"
         },
-        "lichtshow": {
-          "name": "Lichtshow",
-          "price": "299€",
-          "description": "Spektakuläre Lichteffekte"
-        },
         "lichtbild": {
           "name": "Lichterbild",
           "price": "59€",

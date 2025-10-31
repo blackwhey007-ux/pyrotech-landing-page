@@ -13,7 +13,6 @@ const PricingSection: React.FC = () => {
   const getTranslatedExtra = (extraId: string) => {
     const keyMap: { [key: string]: string } = {
       'musik-synchronisation': 'music',
-      'lichtshow': 'lichtshow',
       'lichterbild': 'lichtbild',
       'feuerschalen': 'feuerschalen',
       'grand-finale': 'finale',
