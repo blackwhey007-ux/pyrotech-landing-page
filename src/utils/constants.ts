@@ -289,7 +289,7 @@ export const STORY_CONTENT = {
   story: {
     beginning: 'Es begann mit einem kleinen Jungen, der fasziniert auf die Sterne blickte. Sami war 8 Jahre alt, als er bei einem Stadtfest zum ersten Mal ein professionelles Feuerwerk erlebte. "Ich erinnere mich noch genau", erzählt er mit leuchtenden Augen, "wie die Raketen in den Himmel stiegen und die ganze Familie zum Staunen brachten. In diesem Moment wusste ich: Das ist Magie, und ich will diese Magie zu den Menschen bringen."',
     
-    turningPoint: 'Nach Jahren in der Pyrotechnik-Branche und zahlreichen erfolgreichen Events hatte Sami eine Erkenntnis: "Ich merkte, dass die meisten Anbieter nur Feuerwerk verkaufen. Aber wir verkaufen nicht nur Feuerwerk – wir verkaufen unvergessliche Momente, Tränen der Freude und Erinnerungen fürs Leben."',
+    turningPoint: 'Nach Jahren in der Pyrotechnik-Branche und zahlreichen erfolgreichen Events hatte Sami eine Erkenntnis: "Ich merkte, dass die meisten Anbieter nur Feuerwerkshows verkaufen. Aber wir verkaufen nicht nur Feuerwerkshows – wir verkaufen unvergessliche Momente, Tränen der Freude und Erinnerungen fürs Leben."',
     
     philosophy: 'Heute steht bei Pyrotech nicht die Technik im Vordergrund, sondern die Menschen. "Jede Hochzeit ist anders, jede Familie hat ihre eigene Geschichte", erklärt Sami. "Wir hören zu, verstehen die Träume unserer Kunden und schaffen dann ein Feuerwerk, das perfekt zu ihrer Geschichte passt."',
     
