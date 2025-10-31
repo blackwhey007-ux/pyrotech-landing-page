@@ -242,7 +242,7 @@ export const CONTACT_INFO = {
   whatsapp: '+49 160 120 30 77',
   whatsappHours: '24/7 Schnelle Antworten',
   email: 'pyrotechevent@gmx.de',
-  emailHours: 'Antwort innerhalb von 24h',
+  emailHours: 'Rund um die Uhr für Sie da',
   address: {
     company: 'Pyrotech Event',
     street: 'Arcadiastr.24',
