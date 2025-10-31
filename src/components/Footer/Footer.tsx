@@ -33,8 +33,8 @@ const Footer: React.FC = () => {
       title: '',
       links: [
         { name: 'Instagram', href: 'https://www.instagram.com/pyrotech.event/', icon: Instagram },
-        { name: 'Facebook', href: '#', icon: Facebook },
-        { name: 'YouTube', href: '#', icon: Youtube }
+        { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61576278232614', icon: Facebook },
+        { name: 'YouTube', href: 'https://www.youtube.com/@feuerwerk_event', icon: Youtube }
       ],
       isHorizontal: true,
       hideTitle: true
