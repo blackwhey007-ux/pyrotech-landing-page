@@ -110,6 +110,20 @@
       },
       "cta": "Request Quote"
     },
+    "grand-feuerwerk": {
+      "name": "GRAND FIREWORKS",
+      "price": "from 2.799€",
+      "description": "The ultimate spectacle",
+      "features": {
+        "duration": "Duration: from 7 minutes",
+        "positions": "Launch positions: Multiple (min. 4)",
+        "pyrotechnician": "Pyrotechnician included",
+        "service": "Service package included",
+        "effects": "Special effects",
+        "choreography": "Custom choreography"
+      },
+      "cta": "Request Quote"
+    },
     "extras": {
       "title": "Additional Extras",
       "subtitle": "Personalize your show",

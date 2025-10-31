@@ -110,6 +110,20 @@
       },
       "cta": "Beratung anfragen"
     },
+    "grand-feuerwerk": {
+      "name": "GRAND FEUERWERK",
+      "price": "ab 2.799€",
+      "description": "Das ultimative Spektakel",
+      "features": {
+        "duration": "Dauer: ab 7 Minuten",
+        "positions": "Abschusspositionen: Mehrere (mind. 4)",
+        "pyrotechnician": "Pyrotechniker inklusive",
+        "service": "Servicepaket inklusive",
+        "effects": "Spezialeffekte",
+        "choreography": "Custom Choreografie"
+      },
+      "cta": "Beratung anfragen"
+    },
     "extras": {
       "title": "Zusätzliche Extras",
       "subtitle": "Individuelle Verstärkung Deiner Show",
