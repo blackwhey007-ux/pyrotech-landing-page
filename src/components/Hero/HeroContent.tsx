@@ -52,13 +52,7 @@ const HeroContent: React.FC = () => {
           variant="primary"
           size="lg"
           className="min-w-[200px] shadow-lg"
-          onClick={() => {
-            if (location.pathname === '/') {
-              window.location.hash = '#contact';
-            } else {
-              navigate('/#contact');
-            }
-          }}
+          onClick={() => navigate('/contact-us')}
         >
           Jetzt Beratung buchen
         </Button>
