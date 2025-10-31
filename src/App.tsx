@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import HomePage from './pages/HomePage';
 import AboutUsPage from './pages/AboutUsPage';
+import PreisePage from './pages/PreisePage';
 import ContactPage from './pages/ContactPage';
 import ReviewsPage from './pages/ReviewsPage';
 import SocialFeedsPage from './pages/SocialFeedsPage';
@@ -42,6 +43,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="about-us" element={<AboutUsPage />} />
+          <Route path="preise" element={<PreisePage />} />
           <Route path="contact-us" element={<ContactPage />} />
           <Route path="reviews" element={<ReviewsPage />} />
           <Route path="social-feeds" element={<SocialFeedsPage />} />
