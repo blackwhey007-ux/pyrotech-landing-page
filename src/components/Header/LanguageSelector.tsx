@@ -48,14 +48,15 @@ const LanguageSelector: React.FC = () => {
       </motion.button>
 
       {/* Dropdown Menu */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-full mt-2 right-0 md:left-0 w-48 bg-black/95 backdrop-blur-lg border border-yellow-500/20 rounded-lg overflow-hidden shadow-2xl z-50"
+            key="dropdown-menu"
+            initial={{ opacity: 0, y: -10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.95 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="absolute top-full mt-2 right-0 md:left-0 w-48 bg-black/95 backdrop-blur-lg border border-yellow-500/20 rounded-lg overflow-hidden shadow-2xl z-[60]"
           >
             {languages.map((lang) => (
               <button
