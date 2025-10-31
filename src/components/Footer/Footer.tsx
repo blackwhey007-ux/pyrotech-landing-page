@@ -18,8 +18,7 @@ const Footer: React.FC = () => {
       links: [
         { name: 'Über Uns', href: '/about-us', isInternal: true },
         { name: 'Preise', href: '/preise', isInternal: true },
-        { name: 'Kontakt', href: '/contact-us', isInternal: true },
-        { name: 'Bewertungen', href: '/reviews', isInternal: true }
+        { name: 'Kontakt', href: '/contact-us', isInternal: true }
       ]
     },
     {
@@ -34,10 +33,9 @@ const Footer: React.FC = () => {
       title: 'Folgen Sie Uns',
       links: [
         { name: 'Instagram', href: 'https://www.instagram.com/pyrotech.event/', icon: Instagram },
-        { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61576278232614', icon: Facebook },
-        { name: 'YouTube', href: 'https://www.youtube.com/@feuerwerk_event', icon: Youtube }
-      ],
-      isHorizontal: true
+        { name: 'YouTube', href: 'https://www.youtube.com/@feuerwerk_event', icon: Youtube },
+        { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61576278232614', icon: Facebook }
+      ]
     }
   ];
 
@@ -45,39 +43,12 @@ const Footer: React.FC = () => {
     <footer className="bg-black border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 py-6 md:py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-12 max-w-2xl mx-auto lg:max-w-none lg:grid-cols-4">
-          {/* Company Branding Column - Desktop Only */}
-          <motion.div
-            className="hidden md:block"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <Link to="/" className="flex items-center gap-3 mb-4 group">
-              <img
-                src="/images/logo/Pyrotech-logo.jpg"
-                alt="Pyrotech Event Logo"
-                className="w-12 h-12 rounded-full object-cover group-hover:ring-2 group-hover:ring-yellow-400/50 transition-all duration-300"
-              />
-              <span className="text-xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-                Pyrotech Event
-              </span>
-            </Link>
-            <p className="text-text-secondary text-sm mb-4">
-              Die Feuerwerk-Experten
-            </p>
-            <div className="flex items-start gap-2 text-text-secondary text-sm">
-              <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-              <span>Arcadiastr.24, 40472 Düsseldorf</span>
-            </div>
-          </motion.div>
-
-          {/* Mobile Sections + Desktop Columns 2-4 */}
+        <div className="grid grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-12 max-w-2xl mx-auto md:max-w-4xl lg:grid-cols-3">
+          {/* Mobile Sections + Desktop Columns */}
           {footerSections.map((section, sectionIndex) => (
             <motion.div
               key={section.title}
-              className={`${('isHorizontal' in section && section.isHorizontal) ? 'col-span-2 md:col-span-1' : ''}`}
+              className={sectionIndex === 2 ? 'col-span-2 md:col-span-1' : ''}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: sectionIndex * 0.1 }}
@@ -86,7 +57,7 @@ const Footer: React.FC = () => {
               <h3 className="text-white font-bold text-sm md:text-base mb-3 md:mb-4">
                 {section.title}
               </h3>
-              <ul className={`${'isHorizontal' in section && section.isHorizontal ? 'flex flex-wrap justify-start items-center gap-4 md:gap-3' : 'space-y-2 md:space-y-2'}`}>
+              <ul className="space-y-2 md:space-y-2">
                 {section.links.map((link, linkIndex) => {
                   const IconComponent = 'icon' in link ? link.icon : null;
                   const isInternal = 'isInternal' in link ? link.isInternal : false;
@@ -125,7 +96,7 @@ const Footer: React.FC = () => {
                           className={linkClassName}
                         >
                           {IconComponent && (
-                            <IconComponent className={`${section.isHorizontal ? 'w-6 h-6' : 'w-4 h-4'} group-hover:scale-110 transition-transform duration-300`} />
+                            <IconComponent className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                           )}
                           <span className="text-xs md:text-sm">{link.name}</span>
                         </a>
@@ -175,9 +146,32 @@ const Footer: React.FC = () => {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4">
+          {/* Desktop Bottom Bar - Logo + Links in one row */}
+          <div className="hidden md:flex items-center justify-center gap-3">
+            <Link to="/" className="flex items-center gap-2 group">
+              <img
+                src="/images/logo/Pyrotech-logo.jpg"
+                alt="Pyrotech Event Logo"
+                className="w-6 h-6 rounded-full object-cover group-hover:ring-2 group-hover:ring-yellow-400/50 transition-all duration-300"
+              />
+              <span className="text-sm font-semibold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                Pyrotech Event
+              </span>
+            </Link>
+            <span>•</span>
             <span>© 2025 Pyrotech Event</span>
-            <span className="hidden md:inline">•</span>
+            <span>•</span>
+            <Link to="/impressum" className="hover:text-primary-yellow transition-colors duration-300">
+              Impressum
+            </Link>
+            <span>•</span>
+            <span>Arcadiastr.24, 40472 Düsseldorf</span>
+          </div>
+
+          {/* Mobile Bottom Bar - Same as before */}
+          <div className="flex md:hidden flex-wrap items-center justify-center gap-2">
+            <span>© 2025 Pyrotech Event</span>
+            <span>•</span>
             <Link to="/impressum" className="hover:text-primary-yellow transition-colors duration-300">
               Impressum
             </Link>
