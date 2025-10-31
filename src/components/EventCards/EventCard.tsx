@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { EventCard as EventCardType } from '../../types';
 import ParticleEffect from '../shared/ParticleEffect';
 
@@ -11,8 +12,12 @@ interface EventCardProps {
 
 const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
   const [triggerParticles, setTriggerParticles] = useState(false);
+  
+  const translatedTitle = t(`events.${event.id}.title`);
+  const translatedDescription = t(`events.${event.id}.description`);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -79,10 +84,10 @@ const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
         <div className="relative z-10 p-4 md:p-6 h-full flex flex-col justify-end">
           <div className="text-3xl md:text-4xl mb-2 md:mb-3">{event.icon}</div>
           <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2">
-            {event.title}
+            {translatedTitle}
           </h3>
           <p className="text-text-secondary text-xs md:text-sm leading-relaxed">
-            {event.description}
+            {translatedDescription}
           </p>
         </div>
 
