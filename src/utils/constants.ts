@@ -287,17 +287,17 @@ export const STORY_CONTENT = {
     quote: '"Ich war 8 Jahre alt, als ich das erste Mal Feuerwerk sah. In diesem Moment wusste ich: Das ist Magie, und ich will diese Magie zu den Menschen bringen."'
   },
   story: {
-    beginning: 'Es begann mit einem kleinen Jungen, der fasziniert auf die Sterne blickte. Marcus war 8 Jahre alt, als er bei einem Stadtfest zum ersten Mal ein professionelles Feuerwerk erlebte. "Ich erinnere mich noch genau", erzählt er mit leuchtenden Augen, "wie die Raketen in den Himmel stiegen und die ganze Familie zum Staunen brachten. In diesem Moment wusste ich: Das ist Magie, und ich will diese Magie zu den Menschen bringen."',
+    beginning: 'Es begann mit einem kleinen Jungen, der fasziniert auf die Sterne blickte. Sami war 8 Jahre alt, als er bei einem Stadtfest zum ersten Mal ein professionelles Feuerwerk erlebte. "Ich erinnere mich noch genau", erzählt er mit leuchtenden Augen, "wie die Raketen in den Himmel stiegen und die ganze Familie zum Staunen brachten. In diesem Moment wusste ich: Das ist Magie, und ich will diese Magie zu den Menschen bringen."',
     
-    turningPoint: 'Nach 15 Jahren in der Pyrotechnik-Branche und über 500 erfolgreichen Events hatte Marcus eine Erkenntnis: "Ich merkte, dass die meisten Anbieter nur Feuerwerk verkaufen. Aber wir verkaufen nicht nur Feuerwerk – wir verkaufen unvergessliche Momente, Tränen der Freude und Erinnerungen fürs Leben."',
+    turningPoint: 'Nach Jahren in der Pyrotechnik-Branche und zahlreichen erfolgreichen Events hatte Sami eine Erkenntnis: "Ich merkte, dass die meisten Anbieter nur Feuerwerk verkaufen. Aber wir verkaufen nicht nur Feuerwerk – wir verkaufen unvergessliche Momente, Tränen der Freude und Erinnerungen fürs Leben."',
     
-    philosophy: 'Heute steht bei Pyrotech nicht die Technik im Vordergrund, sondern die Menschen. "Jede Hochzeit ist anders, jede Familie hat ihre eigene Geschichte", erklärt Marcus. "Wir hören zu, verstehen die Träume unserer Kunden und schaffen dann ein Feuerwerk, das perfekt zu ihrer Geschichte passt."',
+    philosophy: 'Heute steht bei Pyrotech nicht die Technik im Vordergrund, sondern die Menschen. "Jede Hochzeit ist anders, jede Familie hat ihre eigene Geschichte", erklärt Sami. "Wir hören zu, verstehen die Träume unserer Kunden und schaffen dann ein Feuerwerk, das perfekt zu ihrer Geschichte passt."',
     
-    memorableMoment: 'Ein besonderer Moment bleibt Marcus für immer in Erinnerung: "Es war eine Hochzeit, bei der die Braut Tränen in den Augen hatte, als unser Feuerwerk zu ihrer Lieblingsmusik explodierte. Ihr Vater kam nach der Show zu mir und sagte: \'Das war der schönste Moment meines Lebens.\' Solche Momente machen alles wert."',
+    memorableMoment: 'Ein besonderer Moment bleibt Sami für immer in Erinnerung: "Es war eine Hochzeit, bei der die Braut Tränen in den Augen hatte, als unser Feuerwerk zu ihrer Lieblingsmusik explodierte. Ihr Vater kam nach der Show zu mir und sagte: \'Das war der schönste Moment meines Lebens.\' Solche Momente machen alles wert."',
     
-    challenge: 'Der größte Wendepunkt kam, als Marcus erkannte, dass Skalierung nicht bedeutet, mehr Events zu machen, sondern bessere. "Wir haben gelernt, dass es wichtiger ist, 50 perfekte Events zu haben als 200 durchschnittliche. Jeder Kunde verdient unsere volle Aufmerksamkeit und Leidenschaft."',
+    challenge: 'Der größte Wendepunkt kam, als Sami erkannte, dass Skalierung nicht bedeutet, mehr Events zu machen, sondern bessere. "Wir haben gelernt, dass es wichtiger ist, perfekte Events zu haben als viele durchschnittliche. Jeder Kunde verdient unsere volle Aufmerksamkeit und Leidenschaft."',
     
-    favorite: 'Am liebsten arbeitet Marcus an intimen Hochzeiten. "Da passiert die echte Magie", sagt er. "Wenn ein Paar zum ersten Mal als Eheleute unter dem Feuerwerk steht, das extra für sie choreografiert wurde – das sind die Momente, für die wir leben."'
+    favorite: 'Am liebsten arbeitet Sami an intimen Hochzeiten. "Da passiert die echte Magie", sagt er. "Wenn ein Paar zum ersten Mal als Eheleute unter dem Feuerwerk steht, das extra für sie choreografiert wurde – das sind die Momente, für die wir leben."'
   },
   values: [
     {
@@ -307,7 +307,7 @@ export const STORY_CONTENT = {
     },
     {
       title: 'Sicherheit an erster Stelle',
-      description: '15 Jahre Erfahrung und TÜV-Zertifizierung garantieren höchste Sicherheitsstandards.',
+      description: 'Langjährige Erfahrung und TÜV-Zertifizierung garantieren höchste Sicherheitsstandards.',
       icon: '🛡️'
     },
     {
