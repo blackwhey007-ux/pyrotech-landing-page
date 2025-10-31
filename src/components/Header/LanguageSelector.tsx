@@ -56,7 +56,7 @@ const LanguageSelector: React.FC = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="absolute top-full mt-2 left-0 w-32 md:w-36 bg-black/95 backdrop-blur-lg border border-yellow-500/20 rounded-lg overflow-hidden shadow-2xl z-[60]"
+            className="absolute top-full mt-2 left-0 md:right-0 md:left-auto w-32 md:w-36 bg-black/95 backdrop-blur-lg border border-yellow-500/20 rounded-lg overflow-hidden shadow-2xl z-[60]"
           >
             {languages.map((lang) => (
               <button
