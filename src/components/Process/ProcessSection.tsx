@@ -1,15 +1,18 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { PROCESS_STEPS } from '../../utils/constants';
 import ProcessStep from './ProcessStep';
 import SectionTitle from '../shared/SectionTitle';
 
 const ProcessSection: React.FC = () => {
+  const { t } = useTranslation();
+  
   return (
     <section id="process" className="py-20 px-4 bg-black">
       <div className="max-w-7xl mx-auto">
         <SectionTitle
-          title="So Einfach Geht's"
-          subtitle="Von der ersten Idee bis zur spektakulären Show"
+          title={t('process.title')}
+          subtitle={t('process.subtitle')}
         />
         
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 lg:gap-4">

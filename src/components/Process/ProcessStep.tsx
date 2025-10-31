@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { ProcessStep as ProcessStepType } from '../../types';
 
 interface ProcessStepProps {
@@ -9,6 +10,10 @@ interface ProcessStepProps {
 }
 
 const ProcessStep: React.FC<ProcessStepProps> = ({ step, index, isLast }) => {
+  const { t } = useTranslation();
+  const translatedTitle = t(`process.steps.${step.id}.title`);
+  const translatedDescription = t(`process.steps.${step.id}.description`);
+  
   return (
     <motion.div
       className="relative flex flex-col items-center text-center"
@@ -34,10 +39,10 @@ const ProcessStep: React.FC<ProcessStepProps> = ({ step, index, isLast }) => {
       {/* Content */}
       <div className="max-w-xs">
         <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">
-          {step.title}
+          {translatedTitle}
         </h3>
         <p className="text-text-secondary text-xs md:text-sm leading-relaxed">
-          {step.description}
+          {translatedDescription}
         </p>
       </div>
 

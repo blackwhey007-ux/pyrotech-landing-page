@@ -1,10 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import Button from '../shared/Button';
 
 const UrgencyCTA: React.FC = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <section className="relative py-20 px-4 bg-black overflow-hidden">
@@ -65,7 +67,7 @@ const UrgencyCTA: React.FC = () => {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Überprüfe Jetzt Deinen Termin
+          {t('cta.title')}
         </motion.h2>
 
         <motion.p
@@ -75,17 +77,7 @@ const UrgencyCTA: React.FC = () => {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
           viewport={{ once: true }}
         >
-          in nur wenigen Sekunden
-        </motion.p>
-
-        <motion.p
-          className="text-lg text-text-secondary mb-12 max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-          viewport={{ once: true }}
-        >
-          Unsere Top-Termine sind schnell ausgebucht - sichere Dir Deinen Wunschtermin heute!
+          {t('cta.subtitle')}
         </motion.p>
 
         {/* CTA Button */}
@@ -101,7 +93,7 @@ const UrgencyCTA: React.FC = () => {
             className="text-xl px-12 py-4"
             onClick={() => navigate('/contact-us')}
           >
-            Verfügbarkeit Prüfen 🔥
+            {t('cta.button')}
           </Button>
         </motion.div>
 
