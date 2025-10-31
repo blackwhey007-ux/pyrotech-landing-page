@@ -15,9 +15,26 @@ const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
   const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
   const [triggerParticles, setTriggerParticles] = useState(false);
+  const [imageError, setImageError] = useState(false);
   
   const translatedTitle = t(`events.${event.id}.title`);
   const translatedDescription = t(`events.${event.id}.description`);
+
+  // Encode image URL to handle special characters and spaces
+  const encodedImageUrl = React.useMemo(() => {
+    if (!event.image || imageError) return '';
+    
+    // Split the path to handle URL encoding properly
+    const parts = event.image.split('/');
+    const encodedParts = parts.map(part => {
+      if (part.includes('.')) {
+        // This is the filename part - encode special characters
+        return encodeURIComponent(part);
+      }
+      return part;
+    });
+    return encodedParts.join('/');
+  }, [event.image, imageError]);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -65,16 +82,16 @@ const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
       >
         {/* Background Image */}
         <div className="absolute inset-0">
-          <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat"
+          <img
+            src={encodedImageUrl}
+            alt={translatedTitle}
+            className="w-full h-full object-cover"
             style={{
-              backgroundImage: `url(${event.image})`,
               filter: isHovered ? 'brightness(1.2)' : 'brightness(1)',
             }}
-            onError={(e) => {
+            onError={() => {
               console.warn('Failed to load image:', event.image);
-              // Fallback to gradient background
-              (e.target as HTMLDivElement).style.background = 'linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%)';
+              setImageError(true);
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
