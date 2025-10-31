@@ -238,7 +238,7 @@ export const VIDEO_ITEMS: VideoItem[] = [
 
 export const CONTACT_INFO = {
   phone: '+49 160 120 30 77',
-  phoneHours: 'Mo-Fr: 9:00 - 18:00 Uhr',
+  phoneHours: 'Mo-So: 6:00 - 22:00 UHR',
   whatsapp: '+49 160 120 30 77',
   whatsappHours: '24/7 Schnelle Antworten',
   email: 'pyrotechevent@gmx.de',
