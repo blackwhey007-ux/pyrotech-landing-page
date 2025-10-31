@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { PricingTier } from '../../types';
 import Button from '../shared/Button';
 import FeaturedBadge from './FeaturedBadge';
@@ -13,8 +14,26 @@ interface PricingCardProps {
 
 const PricingCard: React.FC<PricingCardProps> = ({ tier, index }) => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
   const [triggerParticles, setTriggerParticles] = useState(false);
+  
+  const translatedName = t(`pricing.${tier.id}.name`);
+  const translatedDescription = t(`pricing.${tier.id}.description`);
+  const translatedCta = t(`pricing.${tier.id}.cta`);
+  
+  // Map features to translation keys
+  const getTranslatedFeatures = () => {
+    const featureMap: { [key: string]: string[] } = {
+      'einsteiger': ['duration', 'positions', 'pyrotechnician', 'service', 'safety', 'permit'],
+      'standard': ['duration', 'positions', 'pyrotechnician', 'service', 'effects', 'permit'],
+      'premium': ['duration', 'positions', 'pyrotechnician', 'service', 'effects', 'consultation'],
+      'grand-feuerwerk': ['duration', 'positions', 'pyrotechnician', 'service', 'effects', 'choreography']
+    };
+    
+    const keys = featureMap[tier.id] || [];
+    return keys.map(key => t(`pricing.${tier.id}.features.${key}`));
+  };
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -65,19 +84,19 @@ const PricingCard: React.FC<PricingCardProps> = ({ tier, index }) => {
         {/* Header */}
         <div className="text-center mb-6 md:mb-8">
           <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-            {tier.name}
+            {translatedName}
           </h3>
           <div className="text-3xl md:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
             {tier.price}
           </div>
           <p className="text-text-secondary text-sm md:text-base">
-            {tier.description}
+            {translatedDescription}
           </p>
         </div>
 
         {/* Features */}
         <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
-          {tier.features.map((feature, featureIndex) => (
+          {getTranslatedFeatures().map((feature, featureIndex) => (
             <motion.div
               key={featureIndex}
               className="flex items-start gap-3"
@@ -119,7 +138,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ tier, index }) => {
             style={{ pointerEvents: 'auto', position: 'relative', zIndex: 50 }}
             onClick={() => navigate('/contact-us')}
           >
-            {tier.ctaText}
+            {translatedCta}
           </Button>
         </div>
 
