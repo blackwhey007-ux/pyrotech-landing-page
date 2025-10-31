@@ -16,13 +16,13 @@ const LanguageSelector: React.FC = () => {
   ];
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-1 md:gap-2">
       {languages.map((lang) => (
         <motion.button
           key={lang.code}
           onClick={() => changeLanguage(lang.code)}
           className={`
-            p-1 rounded-full text-xl transition-all duration-200
+            p-1.5 md:p-1 rounded-full text-2xl md:text-xl transition-all duration-200
             ${i18n.language === lang.code ? 'ring-2 ring-yellow-400 scale-110' : 'opacity-70 hover:opacity-100'}
           `}
           whileHover={{ scale: 1.1 }}
