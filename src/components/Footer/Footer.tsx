@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           {footerSections.map((section, sectionIndex) => (
             <motion.div
               key={section.title}
-              className={sectionIndex === 2 ? 'col-span-2 md:col-span-1' : ''}
+              className={`${sectionIndex === 2 ? 'col-span-2 md:col-span-1 flex flex-col items-center md:items-start' : 'flex flex-col items-center md:items-start'}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: sectionIndex * 0.1 }}
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
               <h3 className="text-white font-bold text-sm md:text-base mb-3 md:mb-4">
                 {section.title}
               </h3>
-              <ul className="space-y-2 md:space-y-2">
+              <ul className={`${sectionIndex === 2 ? 'flex md:flex-col gap-4 md:gap-0 md:space-y-2' : 'space-y-2'}`}>
                 {section.links.map((link, linkIndex) => {
                   const IconComponent = 'icon' in link ? link.icon : null;
                   const isInternal = 'isInternal' in link ? link.isInternal : false;
