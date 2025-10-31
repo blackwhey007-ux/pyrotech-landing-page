@@ -1,9 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import { PRICING_TIERS, PRICING_EXTRAS } from '../../utils/constants';
 import PricingCard from './PricingCard';
 import SectionTitle from '../shared/SectionTitle';
 import PricingFireworks3D from './PricingFireworks3D';
 
 const PricingSection: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <section id="pricing" className="relative py-12 md:py-16 lg:py-20 px-4 bg-black overflow-hidden">
       {/* 3D Fireworks Background */}
@@ -44,7 +46,8 @@ const PricingSection: React.FC = () => {
             {PRICING_EXTRAS.map((extra) => (
               <div
                 key={extra.id}
-                className="bg-black/50 backdrop-blur-lg rounded-xl p-3 md:p-6 border border-white/10 hover:border-primary-yellow/50 transition-all duration-300 group"
+                className="bg-black/50 backdrop-blur-lg rounded-xl p-3 md:p-6 border border-white/10 hover:border-primary-yellow/50 transition-all duration-300 group cursor-pointer"
+                onClick={() => navigate('/contact-us')}
               >
                 <div className="text-center">
                   <div className="text-2xl md:text-3xl mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">

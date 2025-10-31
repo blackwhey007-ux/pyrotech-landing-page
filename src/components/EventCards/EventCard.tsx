@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { EventCard as EventCardType } from '../../types';
 import ParticleEffect from '../shared/ParticleEffect';
 
@@ -9,6 +10,7 @@ interface EventCardProps {
 }
 
 const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
+  const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
   const [triggerParticles, setTriggerParticles] = useState(false);
 
@@ -25,6 +27,10 @@ const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
     setTriggerParticles(false);
   };
 
+  const handleClick = () => {
+    navigate('/contact-us');
+  };
+
   const accentColor = event.accentColor === 'red' ? 'border-primary-red' : 'border-primary-yellow';
   const glowColor = event.accentColor === 'red' ? 'shadow-red-500/40' : 'shadow-yellow-500/40';
 
@@ -37,6 +43,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
       viewport={{ once: true }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
     >
       <motion.div
         className={`
