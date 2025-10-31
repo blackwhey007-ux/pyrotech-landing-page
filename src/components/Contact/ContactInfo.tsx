@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, MessageCircle, Mail, MapPin } from 'lucide-react';
+import { Phone, MessageCircle, Mail, MapPin, ChevronDown } from 'lucide-react';
 import { CONTACT_INFO } from '../../utils/constants';
 import GoogleMap from './GoogleMap';
 
 const ContactInfo: React.FC = () => {
+  const [showMap, setShowMap] = useState(false);
+
   const contactItems = [
     {
       icon: Phone,
@@ -57,34 +59,48 @@ const ContactInfo: React.FC = () => {
       <div className="space-y-6">
         {contactItems.map((item, index) => {
           const IconComponent = item.icon;
+          const isAddress = item.title === 'Adresse';
           
           return (
             <motion.div
               key={item.title}
-              className="flex items-start gap-4 group cursor-pointer"
+              className={`flex items-start gap-4 group ${isAddress ? 'cursor-pointer' : ''}`}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ x: 5 }}
+              whileHover={isAddress ? { x: 5 } : {}}
+              onClick={isAddress ? () => setShowMap(!showMap) : undefined}
             >
               <motion.div
                 className="flex-shrink-0 w-12 h-12 bg-black/50 backdrop-blur-lg rounded-full flex items-center justify-center group-hover:bg-gradient-primary transition-all duration-300"
-                whileHover={{ scale: 1.1 }}
+                whileHover={isAddress ? { scale: 1.1 } : {}}
+                whileTap={isAddress ? { scale: 0.95 } : {}}
               >
                 <IconComponent className={`w-6 h-6 ${item.color} group-hover:text-black transition-colors duration-300`} />
               </motion.div>
               
-              <div className="flex-1">
-                <h4 className="text-white font-semibold mb-1 group-hover:text-primary-yellow transition-colors duration-300">
-                  {item.title}
-                </h4>
-                <p className="text-primary-yellow font-medium text-lg mb-1">
-                  {item.main}
-                </p>
-                <p className="text-text-secondary text-sm">
-                  {item.sub}
-                </p>
+              <div className="flex-1 flex items-center justify-between">
+                <div className="flex-1">
+                  <h4 className="text-white font-semibold mb-1 group-hover:text-primary-yellow transition-colors duration-300">
+                    {item.title}
+                  </h4>
+                  <p className="text-primary-yellow font-medium text-lg mb-1">
+                    {item.main}
+                  </p>
+                  <p className="text-text-secondary text-sm">
+                    {item.sub}
+                  </p>
+                </div>
+                {isAddress && (
+                  <motion.div
+                    animate={{ rotate: showMap ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="ml-4"
+                  >
+                    <ChevronDown className="w-5 h-5 text-primary-yellow" />
+                  </motion.div>
+                )}
               </div>
             </motion.div>
           );
@@ -92,7 +108,7 @@ const ContactInfo: React.FC = () => {
       </div>
 
       {/* Google Map */}
-      <GoogleMap />
+      <GoogleMap isVisible={showMap} />
 
       {/* Additional Info */}
       <motion.div
