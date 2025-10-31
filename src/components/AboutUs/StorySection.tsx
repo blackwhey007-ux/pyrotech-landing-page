@@ -42,9 +42,6 @@ const StorySection: React.FC = () => {
           viewport={{ once: true }}
         >
           <div className="text-center">
-            <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center text-3xl">
-              🎆
-            </div>
             <p className="text-xl md:text-2xl text-white leading-relaxed">
               {STORY_CONTENT.company.description}
             </p>
@@ -63,7 +60,6 @@ const StorySection: React.FC = () => {
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
             >
-              <div className="text-5xl mb-4">{principle.icon}</div>
               <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
                 {principle.title}
               </h3>
