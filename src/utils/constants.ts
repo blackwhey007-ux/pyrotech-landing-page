@@ -340,25 +340,23 @@ export const ANNOUNCEMENTS: Announcement[] = [
 ];
 
 export const STORY_CONTENT = {
-  founder: {
-    name: 'Sami Marwani',
-    title: 'Gründer & Chef-Pyrotechniker',
-    image: '/images/founder-marcus.jpg',
-    quote: '"Ich war 8 Jahre alt, als ich das erste Mal Feuerwerk sah. In diesem Moment wusste ich: Das ist Magie, und ich will diese Magie zu den Menschen bringen."'
+  company: {
+    name: 'Pyrotech Event',
+    tagline: 'Spektakuläre Pyrotechnik auf höchstem Niveau',
+    description: 'Pyrotech Event steht für spektakuläre Pyrotechnik auf höchstem Niveau. Wir planen und realisieren beeindruckende Feuerwerkshows für Veranstaltungen jeder Art, von Stadtfesten und Hochzeiten bis zu Großevents.'
   },
-  story: {
-    beginning: 'Es begann mit einem kleinen Jungen, der fasziniert auf die Sterne blickte. Sami war 8 Jahre alt, als er bei einem Stadtfest zum ersten Mal ein professionelles Feuerwerk erlebte. "Ich erinnere mich noch genau", erzählt er mit leuchtenden Augen, "wie die Raketen in den Himmel stiegen und die ganze Familie zum Staunen brachten. In diesem Moment wusste ich: Das ist Magie, und ich will diese Magie zu den Menschen bringen."',
-    
-    turningPoint: 'Nach Jahren in der Pyrotechnik-Branche und zahlreichen erfolgreichen Events hatte Sami eine Erkenntnis: "Ich merkte, dass die meisten Anbieter nur Feuerwerkshows verkaufen. Aber wir verkaufen nicht nur Feuerwerkshows – wir verkaufen unvergessliche Momente, Tränen der Freude und Erinnerungen fürs Leben."',
-    
-    philosophy: 'Heute steht bei Pyrotech nicht die Technik im Vordergrund, sondern die Menschen. "Jede Hochzeit ist anders, jede Familie hat ihre eigene Geschichte", erklärt Sami. "Wir hören zu, verstehen die Träume unserer Kunden und schaffen dann ein Feuerwerk, das perfekt zu ihrer Geschichte passt."',
-    
-    memorableMoment: 'Ein besonderer Moment bleibt Sami für immer in Erinnerung: "Es war eine Hochzeit, bei der die Braut Tränen in den Augen hatte, als unser Feuerwerk zu ihrer Lieblingsmusik explodierte. Ihr Vater kam nach der Show zu mir und sagte: \'Das war der schönste Moment meines Lebens.\' Solche Momente machen alles wert."',
-    
-    challenge: 'Der größte Wendepunkt kam, als Sami erkannte, dass Skalierung nicht bedeutet, mehr Events zu machen, sondern bessere. "Wir haben gelernt, dass es wichtiger ist, perfekte Events zu haben als viele durchschnittliche. Jeder Kunde verdient unsere volle Aufmerksamkeit und Leidenschaft."',
-    
-    favorite: 'Am liebsten arbeitet Sami an intimen Hochzeiten. "Da passiert die echte Magie", sagt er. "Wenn ein Paar zum ersten Mal als Eheleute unter dem Feuerwerk steht, das extra für sie choreografiert wurde – das sind die Momente, für die wir leben."'
-  },
+  principles: [
+    {
+      title: 'Sicherheit, Präzision und Kreativität',
+      description: 'Sicherheit, Präzision und Kreativität stehen bei uns an erster Stelle. Unsere erfahrenen Pyrotechniker verbinden technisches Know-how mit künstlerischem Gespür, um unvergessliche Momente am Himmel zu schaffen.',
+      icon: '🎯'
+    },
+    {
+      title: 'Modernste Technik',
+      description: 'Mit modernster Technik und geprüften Materialien garantieren wir eine sichere und professionelle Durchführung für Shows, die begeistern und in Erinnerung bleiben.',
+      icon: '⚡'
+    }
+  ],
   values: [
     {
       title: 'Leidenschaft für Details',
