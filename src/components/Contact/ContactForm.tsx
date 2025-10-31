@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { contactFormSchema, ContactFormData } from '../../utils/validation';
-import { EVENT_TYPES, PRICING_TIERS } from '../../utils/constants';
+import { EVENT_TYPES } from '../../utils/constants';
 import Button from '../shared/Button';
 
 const ContactForm: React.FC = () => {
@@ -60,14 +60,9 @@ const ContactForm: React.FC = () => {
     const formData = new FormData(document.querySelector('form') as HTMLFormElement);
     const data = Object.fromEntries(formData.entries());
     
-    // Get selected pricing package name
-    const selectedPackage = PRICING_TIERS.find(tier => tier.id === data.pricingPackage);
-    const packageName = selectedPackage ? selectedPackage.name : 'Nicht ausgewählt';
-    
     // Create WhatsApp message
     const message = `Hallo! Ich interessiere mich für ein Feuerwerk-Event:
 
-📦 Gewähltes Paket: ${packageName}
 👤 Name: ${data.name}
 📞 Telefon: ${data.phone}
 📧 E-Mail: ${data.email}
@@ -170,28 +165,6 @@ Ich freue mich auf Ihre Rückmeldung!`;
           </select>
           {errors.eventType && (
             <p className="mt-1 text-sm text-primary-red">{errors.eventType.message}</p>
-          )}
-        </div>
-
-        {/* Pricing Package Field */}
-        <div>
-          <label htmlFor="pricingPackage" className="block text-white font-medium mb-2">
-            Feuerwerk-Paket *
-          </label>
-          <select
-            {...register('pricingPackage')}
-            id="pricingPackage"
-            className="w-full px-4 py-3 bg-black/50 border border-white/20 rounded-lg text-white focus:border-primary-yellow focus:outline-none transition-colors duration-300"
-          >
-            <option value="">Bitte wählen...</option>
-            {PRICING_TIERS.map((tier) => (
-              <option key={tier.id} value={tier.id} className="bg-black">
-                {tier.name} - {tier.price}
-              </option>
-            ))}
-          </select>
-          {errors.pricingPackage && (
-            <p className="mt-1 text-sm text-primary-red">{errors.pricingPackage.message}</p>
           )}
         </div>
 

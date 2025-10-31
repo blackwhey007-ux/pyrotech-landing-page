@@ -16,9 +16,6 @@ export const contactFormSchema = z.object({
   eventType: z.string()
     .min(1, 'Bitte wählen Sie einen Eventtyp aus'),
   
-  pricingPackage: z.string()
-    .min(1, 'Bitte wählen Sie ein Paket aus'),
-  
   preferredDate: z.string()
     .optional(),
   
