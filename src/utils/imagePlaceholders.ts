@@ -20,14 +20,14 @@ export const getImagePlaceholder = (_category: string, name: string, width: numb
 };
 
 export const EVENT_IMAGES = {
-  hochzeiten: '/images/events/hochzeiten.png', // Real wedding fireworks image
-  geburtstage: '/images/events/geburtstage.png', // Real birthday sparkler image
-  silvester: '/images/events/silvester.png', // Real New Year fireworks image
-  'gender-reveal': '/images/events/gender-reveal.png', // Real gender reveal image
-  hochzeitstanz: getImagePlaceholder('events', 'Hochzeitstanz', 380, 280),
-  firmenevent: getImagePlaceholder('events', 'Firmenevent', 380, 280),
-  festival: getImagePlaceholder('events', 'Festival', 380, 280),
-  schuetzenfest: getImagePlaceholder('events', 'Schützenfest', 380, 280),
+  hochzeiten: '/images/Wähle Deinen Anlass/Hochzeiten.png',
+  geburtstage: '/images/Wähle Deinen Anlass/Geburtstage.png',
+  silvester: '/images/Wähle Deinen Anlass/Silvester.png',
+  'gender-reveal': '/images/Wähle Deinen Anlass/Gender Reveal.png',
+  hochzeitstanz: '/images/Wähle Deinen Anlass/first dance.jpg',
+  firmenevent: '/images/Wähle Deinen Anlass/croprate events.jpg',
+  festival: '/images/Wähle Deinen Anlass/Festival.jpg',
+  schuetzenfest: '/images/Wähle Deinen Anlass/traditional festivals.jpg',
   firmenfeiern: getImagePlaceholder('events', 'Firmenfeiern', 380, 280),
   festivals: getImagePlaceholder('events', 'Festivals', 380, 280),
   stadtfeste: getImagePlaceholder('events', 'Stadtfeste', 380, 280),
