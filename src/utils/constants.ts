@@ -237,21 +237,21 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const PROCESS_STEPS: ProcessStep[] = [
   {
-    id: 'beratung',
+    id: 'consultation',
     number: '1',
     title: 'BERATUNG',
     description: 'Kostenlose Erstberatung per Telefon',
     icon: '📞'
   },
   {
-    id: 'planung',
+    id: 'planning',
     number: '2',
     title: 'PLANUNG',
     description: 'Konzept & Individuelles Design',
     icon: '🎨'
   },
   {
-    id: 'genehmigung',
+    id: 'approval',
     number: '3',
     title: 'GENEHMIGUNG',
     description: 'Alle Genehmigungen werden von uns übernommen',
