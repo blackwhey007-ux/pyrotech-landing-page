@@ -89,7 +89,7 @@ const StorySection: React.FC = () => {
           >
             <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-xl p-6 border border-orange-500/30 order-2 md:order-1">
               <div className="text-6xl mb-4">💡</div>
-              <p className="text-orange-400 font-semibold">15 Jahre später</p>
+              <p className="text-orange-400 font-semibold">Später</p>
               <p className="text-gray-300">Die Erkenntnis</p>
             </div>
             <div className="order-1 md:order-2">
