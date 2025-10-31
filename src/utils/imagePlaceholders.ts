@@ -24,6 +24,10 @@ export const EVENT_IMAGES = {
   geburtstage: '/images/events/geburtstage.png', // Real birthday sparkler image
   silvester: '/images/events/silvester.png', // Real New Year fireworks image
   'gender-reveal': '/images/events/gender-reveal.png', // Real gender reveal image
+  hochzeitstanz: getImagePlaceholder('events', 'Hochzeitstanz', 380, 280),
+  firmenevent: getImagePlaceholder('events', 'Firmenevent', 380, 280),
+  festival: getImagePlaceholder('events', 'Festival', 380, 280),
+  schuetzenfest: getImagePlaceholder('events', 'Schützenfest', 380, 280),
   firmenfeiern: getImagePlaceholder('events', 'Firmenfeiern', 380, 280),
   festivals: getImagePlaceholder('events', 'Festivals', 380, 280),
   stadtfeste: getImagePlaceholder('events', 'Stadtfeste', 380, 280),

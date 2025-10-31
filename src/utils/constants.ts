@@ -33,6 +33,38 @@ export const EVENT_CARDS: EventCard[] = [
     icon: '🎊',
     image: EVENT_IMAGES['gender-reveal'],
     accentColor: 'red'
+  },
+  {
+    id: 'hochzeitstanz',
+    title: 'Hochzeitstanz',
+    description: 'Spektakuläre Effekte für den ersten Tanz',
+    icon: '💃',
+    image: EVENT_IMAGES.hochzeitstanz,
+    accentColor: 'gold'
+  },
+  {
+    id: 'firmenevent',
+    title: 'Firmenevent',
+    description: 'Professionelle Pyrotechnik für Corporate Events',
+    icon: '🏢',
+    image: EVENT_IMAGES.firmenevent,
+    accentColor: 'red'
+  },
+  {
+    id: 'festival',
+    title: 'Festival',
+    description: 'Spektakuläre Großfeuerwerke für Veranstaltungen',
+    icon: '🎪',
+    image: EVENT_IMAGES.festival,
+    accentColor: 'gold'
+  },
+  {
+    id: 'schuetzenfest',
+    title: 'Schützenfest',
+    description: 'Traditionelle Feuerwerke für Volksfeste',
+    icon: '🎯',
+    image: EVENT_IMAGES.schuetzenfest,
+    accentColor: 'red'
   }
 ];
 
