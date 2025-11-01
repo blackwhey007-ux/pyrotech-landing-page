@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslation } from 'react-i18next';
 import { contactFormSchema, ContactFormData } from '../../utils/validation';
 import { EVENT_TYPES } from '../../utils/constants';
+import { trackLead, trackContact } from '../../utils/facebookPixel';
 import Button from '../shared/Button';
 
 const ContactForm: React.FC = () => {
@@ -44,6 +45,10 @@ const ContactForm: React.FC = () => {
         console.log('✅ Form submitted successfully to Formspree!');
         setSubmitStatus('success');
         reset();
+        
+        // Track Facebook Pixel events
+        trackLead(); // Track as Lead event
+        trackContact(); // Track as Contact event
       } else {
         const errorData = await response.json();
         console.error('❌ Form submission failed:', errorData);

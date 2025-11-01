@@ -8,6 +8,7 @@ import ContactPage from './pages/ContactPage';
 import ReviewsPage from './pages/ReviewsPage';
 import SocialFeedsPage from './pages/SocialFeedsPage';
 import ImpressumPage from './pages/ImpressumPage';
+import FacebookPixel from './components/FacebookPixel';
 import './App.css';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
 
   return (
     <div className="App">
+      <FacebookPixel />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />

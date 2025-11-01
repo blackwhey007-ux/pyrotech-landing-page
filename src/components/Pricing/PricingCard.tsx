@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { PricingTier } from '../../types';
+import { trackInitiateCheckout, trackViewContent } from '../../utils/facebookPixel';
 import Button from '../shared/Button';
 import FeaturedBadge from './FeaturedBadge';
 import ParticleEffect from '../shared/ParticleEffect';
@@ -47,6 +48,13 @@ const PricingCard: React.FC<PricingCardProps> = ({ tier, index }) => {
   const handleParticleComplete = () => {
     setTriggerParticles(false);
   };
+
+  // Track view content when pricing card is viewed
+  React.useEffect(() => {
+    if (isHovered) {
+      trackViewContent(translatedName, 'Pricing Package');
+    }
+  }, [isHovered, translatedName]);
 
   return (
     <motion.div
@@ -136,7 +144,10 @@ const PricingCard: React.FC<PricingCardProps> = ({ tier, index }) => {
             size="md"
             className="w-full relative z-50"
             style={{ pointerEvents: 'auto', position: 'relative', zIndex: 50 }}
-            onClick={() => navigate('/contact-us')}
+            onClick={() => {
+              trackInitiateCheckout(tier.price ? parseFloat(tier.price.replace('€', '').replace(',', '.')) : undefined);
+              navigate('/contact-us');
+            }}
           >
             {translatedCta}
           </Button>
