@@ -17,6 +17,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, index }) => {
   // Detect iOS device
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  
+  // Detect Chrome browser
+  const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
   const handlePlay = () => {
     console.log('🎬 Video play button clicked!');
@@ -27,28 +30,29 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, index }) => {
 
   // Check if it's a YouTube video ID or local file
   const isYouTubeVideo = !video.videoUrl.includes('/') && !video.videoUrl.includes('.');
-  // Updated YouTube embed URL with iOS-specific parameters for autoplay
+  // Updated YouTube embed URL with parameters for autoplay (works for all browsers)
   const youtubeEmbedUrl = isYouTubeVideo 
-    ? `https://www.youtube.com/embed/${video.videoUrl}?autoplay=1&mute=1&rel=0&modestbranding=1&loop=1&playlist=${video.videoUrl}&playsinline=1&controls=0&disablekb=1&enablejsapi=1&origin=${typeof window !== 'undefined' ? window.location.origin : ''}`
+    ? `https://www.youtube.com/embed/${video.videoUrl}?autoplay=1&mute=1&rel=0&modestbranding=1&loop=1&playlist=${video.videoUrl}&playsinline=1&controls=0&disablekb=1&enablejsapi=1&origin=${typeof window !== 'undefined' ? window.location.origin : ''}&iv_load_policy=3`
     : undefined;
 
-  // Track user interaction for iOS autoplay
+  // Track user interaction for autoplay (required by Chrome and iOS)
   useEffect(() => {
     const handleUserInteraction = () => {
       if (!hasUserInteracted) {
+        console.log('✅ User interaction detected - autoplay enabled');
         setHasUserInteracted(true);
       }
     };
 
-    // Listen for any user interaction
-    const events = ['touchstart', 'touchend', 'click', 'scroll', 'keydown'];
+    // Listen for any user interaction - more comprehensive for Chrome
+    const events = ['touchstart', 'touchend', 'mousedown', 'mouseup', 'click', 'scroll', 'wheel', 'keydown'];
     events.forEach(event => {
-      window.addEventListener(event, handleUserInteraction, { once: true, passive: true });
+      document.addEventListener(event, handleUserInteraction, { once: true, passive: true });
     });
 
     return () => {
       events.forEach(event => {
-        window.removeEventListener(event, handleUserInteraction);
+        document.removeEventListener(event, handleUserInteraction);
       });
     };
   }, [hasUserInteracted]);
@@ -58,27 +62,32 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, index }) => {
     const currentRef = videoContainerRef.current;
     if (!currentRef) return;
 
+    let timeoutId: NodeJS.Timeout | null = null;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isPlaying) {
-            // For iOS, require user interaction first
-            if (isIOS && !hasUserInteracted) {
-              // On iOS, trigger play after a short delay to allow user interaction
-              setTimeout(() => {
-                if (!isPlaying) {
+            // For iOS and Chrome, require user interaction first (autoplay policy)
+            if ((isIOS || isChrome) && !hasUserInteracted) {
+              // Wait a bit for user interaction, then try to play
+              timeoutId = setTimeout(() => {
+                if (!isPlaying && hasUserInteracted) {
+                  setIsPlaying(true);
+                } else if (!isPlaying) {
+                  // Even without interaction, try to play (might work if page had prior interaction)
                   setIsPlaying(true);
                 }
-              }, 100);
+              }, 300);
             } else {
-              // Auto-play when video is 50% visible (non-iOS or after interaction)
+              // Auto-play when video is 30% visible (after interaction or non-restricted browsers)
               setIsPlaying(true);
             }
           }
         });
       },
       { 
-        threshold: 0.5, // Trigger when 50% visible
+        threshold: 0.3, // Trigger when 30% visible (more aggressive for Chrome)
         rootMargin: '0px' 
       }
     );
@@ -87,16 +96,20 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, index }) => {
 
     return () => {
       observer.unobserve(currentRef);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
     };
-  }, [isPlaying, isIOS, hasUserInteracted]);
+  }, [isPlaying, isIOS, isChrome, hasUserInteracted]);
 
-  // Force play on iOS using YouTube API postMessage
+  // Force play using YouTube API postMessage (for Chrome and iOS)
   useEffect(() => {
-    if (isPlaying && isYouTubeVideo && isIOS && iframeRef.current) {
-      // Try to force play using YouTube iframe API
+    if (isPlaying && isYouTubeVideo && iframeRef.current) {
+      // Wait for iframe to load, then force play
       const attemptPlay = () => {
         if (iframeRef.current?.contentWindow) {
           try {
+            // Send play command via YouTube iframe API
             iframeRef.current.contentWindow.postMessage(
               JSON.stringify({
                 event: 'command',
@@ -105,18 +118,34 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, index }) => {
               }),
               '*'
             );
+            console.log('✅ Sent YouTube playVideo command');
           } catch (e) {
             console.log('YouTube API postMessage attempt:', e);
           }
         }
       };
 
-      // Try immediately and after delays
-      attemptPlay();
-      setTimeout(attemptPlay, 500);
-      setTimeout(attemptPlay, 1000);
+      // Try multiple times with delays to ensure iframe is ready
+      const timeouts = [
+        setTimeout(attemptPlay, 500),
+        setTimeout(attemptPlay, 1000),
+        setTimeout(attemptPlay, 1500),
+        setTimeout(attemptPlay, 2000)
+      ];
+
+      // Also listen for iframe load event
+      const iframe = iframeRef.current;
+      const handleLoad = () => {
+        setTimeout(attemptPlay, 100);
+      };
+      iframe.addEventListener('load', handleLoad);
+
+      return () => {
+        timeouts.forEach(clearTimeout);
+        iframe.removeEventListener('load', handleLoad);
+      };
     }
-  }, [isPlaying, isYouTubeVideo, isIOS]);
+  }, [isPlaying, isYouTubeVideo]);
 
   return (
     <motion.div
