@@ -10,20 +10,48 @@ interface VideoPlayerProps {
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, index }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [hasUserInteracted, setHasUserInteracted] = useState(false);
   const videoContainerRef = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  // Detect iOS device
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
   const handlePlay = () => {
     console.log('🎬 Video play button clicked!');
     console.log('🎬 Video URL:', video.videoUrl);
     setIsPlaying(true);
+    setHasUserInteracted(true);
   };
 
   // Check if it's a YouTube video ID or local file
   const isYouTubeVideo = !video.videoUrl.includes('/') && !video.videoUrl.includes('.');
-  // Updated YouTube embed URL with mute and loop for autoplay
+  // Updated YouTube embed URL with iOS-specific parameters for autoplay
   const youtubeEmbedUrl = isYouTubeVideo 
-    ? `https://www.youtube.com/embed/${video.videoUrl}?autoplay=1&mute=1&rel=0&modestbranding=1&loop=1&playlist=${video.videoUrl}`
+    ? `https://www.youtube.com/embed/${video.videoUrl}?autoplay=1&mute=1&rel=0&modestbranding=1&loop=1&playlist=${video.videoUrl}&playsinline=1&controls=0&disablekb=1&enablejsapi=1&origin=${typeof window !== 'undefined' ? window.location.origin : ''}`
     : undefined;
+
+  // Track user interaction for iOS autoplay
+  useEffect(() => {
+    const handleUserInteraction = () => {
+      if (!hasUserInteracted) {
+        setHasUserInteracted(true);
+      }
+    };
+
+    // Listen for any user interaction
+    const events = ['touchstart', 'touchend', 'click', 'scroll', 'keydown'];
+    events.forEach(event => {
+      window.addEventListener(event, handleUserInteraction, { once: true, passive: true });
+    });
+
+    return () => {
+      events.forEach(event => {
+        window.removeEventListener(event, handleUserInteraction);
+      });
+    };
+  }, [hasUserInteracted]);
 
   // Auto-play when video comes into viewport
   useEffect(() => {
@@ -34,8 +62,18 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, index }) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isPlaying) {
-            // Auto-play when video is 50% visible
-            setIsPlaying(true);
+            // For iOS, require user interaction first
+            if (isIOS && !hasUserInteracted) {
+              // On iOS, trigger play after a short delay to allow user interaction
+              setTimeout(() => {
+                if (!isPlaying) {
+                  setIsPlaying(true);
+                }
+              }, 100);
+            } else {
+              // Auto-play when video is 50% visible (non-iOS or after interaction)
+              setIsPlaying(true);
+            }
           }
         });
       },
@@ -50,7 +88,35 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, index }) => {
     return () => {
       observer.unobserve(currentRef);
     };
-  }, [isPlaying]);
+  }, [isPlaying, isIOS, hasUserInteracted]);
+
+  // Force play on iOS using YouTube API postMessage
+  useEffect(() => {
+    if (isPlaying && isYouTubeVideo && isIOS && iframeRef.current) {
+      // Try to force play using YouTube iframe API
+      const attemptPlay = () => {
+        if (iframeRef.current?.contentWindow) {
+          try {
+            iframeRef.current.contentWindow.postMessage(
+              JSON.stringify({
+                event: 'command',
+                func: 'playVideo',
+                args: []
+              }),
+              '*'
+            );
+          } catch (e) {
+            console.log('YouTube API postMessage attempt:', e);
+          }
+        }
+      };
+
+      // Try immediately and after delays
+      attemptPlay();
+      setTimeout(attemptPlay, 500);
+      setTimeout(attemptPlay, 1000);
+    }
+  }, [isPlaying, isYouTubeVideo, isIOS]);
 
   return (
     <motion.div
@@ -131,12 +197,19 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, index }) => {
           /* Video Player - YouTube or Local */
           isYouTubeVideo ? (
             <iframe
+              ref={iframeRef}
               src={youtubeEmbedUrl}
               title={video.title}
               className="w-full h-full"
               frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; playsinline"
               allowFullScreen
+              playsInline
+              webkit-playsinline="true"
+              style={{ 
+                pointerEvents: 'auto',
+                WebkitPlaysinline: 'true' as any
+              }}
             />
           ) : (
             <video
