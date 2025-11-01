@@ -9,11 +9,11 @@ const StorySection: React.FC = () => {
   return (
     <section className="relative py-16 md:py-20 lg:py-24 px-4 bg-black overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
         <img
           src="/images/uber uns/uber uns.jpg"
           alt="About Us Background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover md:scale-100 scale-125"
           style={{
             objectPosition: 'center center',
             minHeight: '100%'
