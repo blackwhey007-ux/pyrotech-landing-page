@@ -14,10 +14,14 @@ const StorySection: React.FC = () => {
           src="/images/uber uns/uber uns.jpg"
           alt="About Us Background"
           className="w-full h-full object-cover"
+          style={{
+            objectPosition: 'center center',
+            minHeight: '100%'
+          }}
           loading="lazy"
         />
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+        {/* Dark overlay for better text readability - stronger on mobile */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80 md:from-black/60 md:via-black/50 md:to-black/70" />
       </div>
       
       {/* 3D Background */}
