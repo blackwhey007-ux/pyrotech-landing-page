@@ -10,10 +10,24 @@ const StorySection: React.FC = () => {
     <section className="relative py-16 md:py-20 lg:py-24 px-4 bg-black overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Mobile Image - only visible on phones */}
+        <img
+          src="/images/uber uns/uber uns phone.jpg"
+          alt="About Us Background Mobile"
+          className="w-full h-full object-cover md:hidden"
+          style={{
+            objectPosition: 'center center',
+            minHeight: '100%',
+            width: '100%',
+            height: '100%'
+          }}
+          loading="lazy"
+        />
+        {/* Desktop Image - only visible on desktop/web */}
         <img
           src="/images/uber uns/uber uns.jpg"
           alt="About Us Background"
-          className="w-full h-full object-cover md:scale-100 scale-150 sm:scale-140"
+          className="hidden md:block w-full h-full object-cover"
           style={{
             objectPosition: 'center center',
             minHeight: '100%',
