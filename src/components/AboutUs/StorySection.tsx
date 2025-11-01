@@ -14,12 +14,12 @@ const StorySection: React.FC = () => {
         <img
           src="/images/uber uns/uber uns phone.jpg"
           alt="About Us Background Mobile"
-          className="w-full h-full object-cover md:hidden"
+          className="w-full h-auto object-contain md:hidden"
           style={{
-            objectPosition: 'center center',
-            minHeight: '100%',
+            objectPosition: 'top center',
             width: '100%',
-            height: '100%'
+            height: 'auto',
+            display: 'block'
           }}
           loading="lazy"
         />
