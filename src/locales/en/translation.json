@@ -54,6 +54,7 @@
   "pricing": {
     "title": "Our Packages",
     "subtitle": "Transparent and fair - with no hidden costs",
+    "featuredBadge": "MOST POPULAR PACKAGE",
     "einsteiger": {
       "name": "STARTER PACKAGE",
       "price": "699€",

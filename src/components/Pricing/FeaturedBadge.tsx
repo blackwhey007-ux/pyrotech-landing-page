@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const FeaturedBadge: React.FC = () => {
+  const { t } = useTranslation();
+  
   return (
     <motion.div
       className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-30"
@@ -26,7 +29,7 @@ const FeaturedBadge: React.FC = () => {
             ease: "easeInOut"
           }}
         >
-          ⭐ BELIEBTESTES PAKET
+          ⭐ {t('pricing.featuredBadge')}
         </motion.div>
         
         {/* Glow effect */}

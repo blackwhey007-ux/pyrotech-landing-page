@@ -54,6 +54,7 @@
   "pricing": {
     "title": "Nos Formules",
     "subtitle": "Transparent et équitable - sans frais cachés",
+    "featuredBadge": "FORMULE LA PLUS POPULAIRE",
     "einsteiger": {
       "name": "FORMULE DÉCOUVERTE",
       "price": "699€",

@@ -54,6 +54,7 @@
   "pricing": {
     "title": "Unsere Pakete",
     "subtitle": "Transparent und fair - ohne versteckte Kosten",
+    "featuredBadge": "BELIEBTESTES PAKET",
     "einsteiger": {
       "name": "EINSTEIGERPAKET",
       "price": "699€",

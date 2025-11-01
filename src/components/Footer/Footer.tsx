@@ -11,6 +11,7 @@ import {
   Youtube,
   MapPin
 } from 'lucide-react';
+import { CONTACT_INFO } from '../../utils/constants';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -27,9 +28,9 @@ const Footer: React.FC = () => {
     {
       title: t('footer.contact'),
       links: [
-        { name: t('footer.phone'), href: 'tel:+492119998877', icon: Phone },
-        { name: t('footer.email'), href: 'mailto:pyrotechevent@gmx.de', icon: Mail },
-        { name: t('footer.whatsapp'), href: 'https://wa.me/491601203077', icon: MessageCircle }
+        { name: t('footer.phone'), href: `tel:${CONTACT_INFO.phone.replace(/\s/g, '')}`, icon: Phone },
+        { name: t('footer.email'), href: `mailto:${CONTACT_INFO.email}`, icon: Mail },
+        { name: t('footer.whatsapp'), href: `https://wa.me/${CONTACT_INFO.whatsapp.replace(/\s/g, '').replace('+', '')}`, icon: MessageCircle }
       ]
     },
     {
