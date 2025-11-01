@@ -292,7 +292,7 @@ export const VIDEO_ITEMS: VideoItem[] = [
     title: 'Hochzeits-Feuerwerk',
     category: 'Hochzeit',
     thumbnail: VIDEO_THUMBNAILS['hochzeit-video'],
-    videoUrl: '_bpIyM5yHcM' // YouTube video ID
+    videoUrl: '1-fokNgAJ8o' // YouTube video ID
   }
 ];
 
