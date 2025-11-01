@@ -18,8 +18,7 @@ const StorySection: React.FC = () => {
           style={{
             objectPosition: 'top center',
             width: '100%',
-            height: 'auto',
-            display: 'block'
+            height: 'auto'
           }}
           loading="lazy"
         />
@@ -27,12 +26,9 @@ const StorySection: React.FC = () => {
         <img
           src="/images/uber uns/uber uns.jpg"
           alt="About Us Background"
-          className="hidden md:block w-full h-full object-cover"
+          className="hidden md:block absolute inset-0 w-full h-full object-cover"
           style={{
-            objectPosition: 'center center',
-            minHeight: '100%',
-            width: '100%',
-            height: '100%'
+            objectPosition: 'center center'
           }}
           loading="lazy"
         />
