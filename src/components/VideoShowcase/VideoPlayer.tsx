@@ -204,11 +204,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, index }) => {
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; playsinline"
               allowFullScreen
-              playsInline
-              webkit-playsinline="true"
               style={{ 
-                pointerEvents: 'auto',
-                WebkitPlaysinline: 'true' as any
+                pointerEvents: 'auto'
               }}
             />
           ) : (
