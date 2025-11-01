@@ -289,7 +289,7 @@ export const TRUST_BADGES: TrustBadge[] = [
 export const VIDEO_ITEMS: VideoItem[] = [
   {
     id: 'hochzeit-video',
-    title: 'Hochzeits-Feuerwerk',
+    title: 'Hochzeitsfeuerwerk',
     category: 'Hochzeit',
     thumbnail: VIDEO_THUMBNAILS['hochzeit-video'],
     videoUrl: '1-fokNgAJ8o' // YouTube video ID
