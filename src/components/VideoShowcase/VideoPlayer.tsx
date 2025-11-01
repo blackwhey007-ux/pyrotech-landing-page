@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { VideoItem } from '../../types';
 
@@ -10,6 +10,7 @@ interface VideoPlayerProps {
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, index }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const videoContainerRef = useRef<HTMLDivElement>(null);
 
   const handlePlay = () => {
     console.log('🎬 Video play button clicked!');
@@ -19,9 +20,37 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, index }) => {
 
   // Check if it's a YouTube video ID or local file
   const isYouTubeVideo = !video.videoUrl.includes('/') && !video.videoUrl.includes('.');
+  // Updated YouTube embed URL with mute and loop for autoplay
   const youtubeEmbedUrl = isYouTubeVideo 
-    ? `https://www.youtube.com/embed/${video.videoUrl}?autoplay=1&rel=0&modestbranding=1`
+    ? `https://www.youtube.com/embed/${video.videoUrl}?autoplay=1&mute=1&rel=0&modestbranding=1&loop=1&playlist=${video.videoUrl}`
     : undefined;
+
+  // Auto-play when video comes into viewport
+  useEffect(() => {
+    const currentRef = videoContainerRef.current;
+    if (!currentRef) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isPlaying) {
+            // Auto-play when video is 50% visible
+            setIsPlaying(true);
+          }
+        });
+      },
+      { 
+        threshold: 0.5, // Trigger when 50% visible
+        rootMargin: '0px' 
+      }
+    );
+
+    observer.observe(currentRef);
+
+    return () => {
+      observer.unobserve(currentRef);
+    };
+  }, [isPlaying]);
 
   return (
     <motion.div
@@ -34,7 +63,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, index }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Video Container */}
-      <div className="relative aspect-video bg-black rounded-2xl overflow-hidden">
+      <div ref={videoContainerRef} className="relative aspect-video bg-black rounded-2xl overflow-hidden">
         {!isPlaying ? (
           <>
             {/* Thumbnail */}
