@@ -20,7 +20,7 @@ export const getImagePlaceholder = (_category: string, name: string, width: numb
 };
 
 export const EVENT_IMAGES = {
-  hochzeiten: '/images/Wähle Deinen Anlass/Hochzeiten.png',
+  hochzeiten: '/images/Wähle Deinen Anlass/Hochzeiten.jpg',
   geburtstage: '/images/Wähle Deinen Anlass/geburtstage.png',
   silvester: '/images/Wähle Deinen Anlass/Silvester.png',
   'gender-reveal': '/images/Wähle Deinen Anlass/Gender Reveal.png',
