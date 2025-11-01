@@ -8,6 +8,18 @@ const StorySection: React.FC = () => {
   
   return (
     <section className="relative py-16 md:py-20 lg:py-24 px-4 bg-black overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/uber uns/uber uns.jpg"
+          alt="About Us Background"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+      </div>
+      
       {/* 3D Background */}
       <Story3D />
       
