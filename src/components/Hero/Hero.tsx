@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/images/background/pyrotech-background.png"
+          src="/images/background/pyrotech-background.jpg"
           alt="Pyrotech Event Background"
           className="w-full h-full object-cover"
           loading="lazy"
